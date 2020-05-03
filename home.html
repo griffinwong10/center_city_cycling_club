@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+
+<!--
+=====================================================================================
+Project Name: Week 2 - Assignment 5 - Center City Cycling Club (CCCC)
+Project Description: The beginning of our web page. It contains information
+about our organization. We describe what we are all about! Included on
+this web page are our mission statement, company slogan, services, products and logo.
+DUE DATE: 4/22/2020 23:59:59
+LAST EDIT (DATE/TIME): 04/21/2020 21:19:32 EST GW
+Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
+======================================================================================
+-->
+ 
+<html>
+  <head>
+      <meta charset = "utf-8">
+           <title>Center City Cycling Club</title>
+           <!-- Added background colour, GW 04/18/2020-->
+           <!-- Reference: https://www.w3schools.com/tags/tag_body.asp-->
+           <!-- Reference for Colors: https://htmlcolorcodes.com/-->
+           <style type="text/css">
+               body {
+                   background-color:white;             
+               }
+           </style>
+
+    <!--Added Header/Banner Image as Style GW 04/19/2020
+    Reference: https://www.w3schools.com/cssref/pr_background-image.asp
+    Reference: https://unsplash.com/@maicoamorim?utm_source=trello&utm_medium=referral&utm_campaign=api-credit-->
+    <style>
+        .imageContainer {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            width:1440px;
+            height:215px;
+            margin-bottom: 0em;
+            margin-top: 0em;
+            background-image: url("pic9.jpg");
+        }
+    </style>
+ 
+    <!--Added Font Style for the Header/Banner GW 04/19/2020
+    Reference: https://www.w3schools.com/w3css/w3css_fonts.asp-->
+
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    
+    <style>
+        .monoton {
+            font-family: 'Monoton';
+            font-size:60px;
+            color:darkorange;
+            text-align:center;
+            margin-top: 1.35em;
+        }
+    </style>
+    
+    <!--Implement Image and Font Together GW 04/19/2020-->
+    <b> <!--Reference: https://www.w3schools.com/cssref/pr_background-image.asp-->
+        <div class="imageContainer">
+            <h1 class="monoton">
+                <i>
+                    <u>CENTER CITY CYCLING CLUB</u>
+                </i>
+            </h1>
+                <!--Updated the formating of the slogan GW 04/20/2020-->
+                <!--updated color from white to darkorange JW 04/20/2020-->
+                <h6 style="text-align:center;font-family:'Modern';font-size:30px; margin-bottom: 5em;margin-top: -1.5em;font-size:20px;color:white">
+                    <i>
+                        Speeding Across the Streets of Philadelphia Since 2020
+                    </i>
+                </h6>
+        </div>
+    </b>
+    
+    <!--Added list of events JW 04/19/2020
+    <Changed Color of Links, Made all Text Bold and Changed Font GW 04/20/2020 -->
+    <div>
+    <!-- logo reference: http://www.marywood.edu/studentactivities/clubs/club-detail.html?id=3acfbfe7-2684-42d8-99bf-5ad7376c1a74 -->
+    <b><!-- Reference: https://html-online.com/articles/image-align-center/ -->
+        <h3 style="text-align:center;font-family:'Modern';color:darkorange;margin-top:225px">2020 EVENTS</h3>
+            <ul style="text-align:center;font-size:16px;list-style-type:none;font-family:'Modern'">
+                <li style="font-family:'Modern'">MAY 16 : MANAYUNK HILLS</lis>
+                    <a style="color:orange;font-family:'Modern'" href="registration_form.html">Register</a>
+                <li style="font-family:'Modern'">JUNE 21 : SCHUYLKILL RIDE ALONG</lis>
+                    <a style="color:orange;font-family:'Modern'" href="registration_form.html">Register</a>
+                <li style="font-family:'Modern'">JULY 4 : TOUR THE SHORE</lis>
+                    <a style="color:orange;font-family:'Modern'" href="registration_form.html">Register</a>
+                <li style="font-family:'Modern'">SEPTEMBER 12 : ROCKY RIDE</lis>
+                    <a style="color:orange;font-family:'Modern'" href="registration_form.html">Register</a>
+            </ul>
+        </b>
+    </div>
+
+    <!-- Commented out these images for now, we can discuss where to replace GW 04/20/2020 -->
+       <!-- Add event register image/link JW 04/19/2020
+           reference: http://www.pdxlan.net/home/images/web_assets/event-register-banner.png.jpg
+           reference: https://feltbicycles.com/blogs/news/what-is-the-best-road-bike-for-me
+           reference: https://i.ytimg.com/vi/8k0Enzf1tak/maxresdefault.jpg
+           reference: https://owlcation.com/stem/how-to-align-images-side-by-side
+           reference https://www.w3schools.com/tags/tag_hr.asp
+       -->
+   <!--<a href><img align="middle"src="event_register.jpg" width="200" height="50" alt="Register for an event"class="marginauto"></a>-->
+
+ 
+    <!--updated naming convention for pics to properly view in different web browsers JW 04/20/2020-->
+    <b><!-- Added titles for each product, added order now links, and added images for each-->     
+        <div>  <!-- product, the products were made using reference #1: GW 04/19/2020-->
+            <!-- Reference #1: https://www.voler.com/custom/3dDesignStudio#/catalogue/cycling -->
+            <hr style="border: 0.8px solid black;">
+            <h3 style="text-align:center;font-family:'Modern';color:darkorange; margin-bottom: -0.25em;margin-top: -0.25em">Club Shop</h3>
+            <hr style="border: 0.8px solid black;">
+            <a>
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 5em; margin-top: 5px">Stars n' Stripes Jersey Grey</h5s>
+            </a>
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 12%">Topography Jersey Black</h5s>
+            </a>
+            <a>
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 14%">Contra Shorts Black</h5s>
+            </a>
+            <a href="ss_grey.html">
+                <img src="pic.jpg" style="float: left; width: 20%; margin-right: 1%; margin-left: 6em; margin-bottom: 0.5em;margin-top: 0.8em" height="200">
+            </a>
+            <a href="topo_black.html">
+                <img src="pic2.jpg" style="float: left; width: 20%; margin-right: 1%; margin-left: 8.5em; margin-bottom: 0.5em;margin-top: 0.8em" height="200">
+            </a>
+            <a href="contra.html">
+                <img src="pic4.jpg" style="float: left; width: 20%; margin-right: 1%; margin-left: 8em; margin-bottom: 0.5em;margin-top: 0.8em" height="200">
+            </a>
+            <a href="">
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 12%;color:cadetblue">Add to Cart</h5s>
+            </a>  
+            <a href="">
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 25%;color:cadetblue">Add to Cart</h5s>
+            </a>        
+            <a href="">
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 21%;color:cadetblue">Add to Cart</h5s>
+            </a>
+            <p style="clear: both;">
+            </p>
+        </div>
+    </b>
+
+    <b><!-- Added titles for each product, added order now links, and added images for each-->     
+        <div>  <!-- product, the products were made using reference #1: GW 04/19/2020-->
+            <!-- Reference #1: https://www.voler.com/custom/3dDesignStudio#/catalogue/cycling -->
+            <hr style="border: 1px solid black;">
+
+            <a">
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 5em; margin-top: 5px">Stars n' Stripes Jersey White</h5s>
+            </a>
+            <a">
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 12%">Topography Jersey White</h5s>
+            </a>
+            <a">
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 14%">Incline Shorts White</h5s>
+            </a>
+            <a href="ss_white.html">
+                <img src="pic6.jpg" style="float: left; width: 20%; margin-right: 1%; margin-left: 6em; margin-bottom: 0.5em;margin-top: 0.8em" height="200">
+            </a>
+            <a href="topo_white.html">
+                <img src="pic7.jpg" style="float: left; width: 20%; margin-right: 1%; margin-left: 8.5em; margin-bottom: 0.5em;margin-top: 0.8em" height="200">
+            </a>
+            <a href="incline.html">
+                <img src="pic8.jpg" style="float: left; width: 20%; margin-right: 1%; margin-left: 8em; margin-bottom: 0.5em;margin-top: 0.8em" height="200">
+            </a>
+            <a href="">
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 12%;color:cadetblue">Add to Cart</h5s>
+            </a>  
+            <a href="">
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 25%;color:cadetblue">Add to Cart</h5s>
+            </a>        
+            <a href="">
+                <h5s style="text-align:left;font-family:'Modern';margin-left: 21%;color:cadetblue">Add to Cart</h5s>
+            </a>
+            <p style="clear: both;">
+            </p>
+
+
+        </div>
+        <hr style="border: 1px solid black;">
+    </b>
+ 
+
+    <!--GW 04/20/2020-->
+    <style>
+        .marginauto {
+            margin: 10px auto 5px;
+            display: block;
+        }
+    </style>
+
+    <div> <!--Added Principles and bold text, GW 04/18/2020-->
+        <!--Reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b
+            Reference: https://www.w3schools.com/html/html_paragraphs.asp
+            Reference: https://www.w3schools.com/tags/tag_font.asp
+            Reference: https://www.w3schools.com/tags/tag_u.asp-->
+            <b><h3 style="text-align:center;font-family:'Modern'"></b>
+            <b>
+                <i>
+                    <u>CCCC Principles</u>
+                </i>
+            </b>
+        </h3>
+            <b>
+                <p style="text-align:center;font-size:16px;color:darkorange">
+                    <b>COMMUNITY</b>
+                </p>
+                <p style="text-align:center;font-size:14px">
+                    We value the diverse perspectives that our community brings to the Club.
+                </p>
+                <p style="text-align:center;font-size:14px">
+                    It is important that we remain open and accepting to all walks of life and encourage
+                <p style="text-align:center;font-size:14px">
+                    growth and development for all cyclists.
+                </p>
+                <p style="text-align:center;font-size:16px;color:darkorange">
+                    <b>DEDICATION</b>
+                </p>
+                <p style="text-align:center;font-size:14px">
+                    Dedication to the sport and to the community is important to us.
+                </p>
+                <p style="text-align:center;font-size:14px">
+                    We promote an environment for dedicated cyclists to enjoy their passion and to grow together.
+                </p>
+                <p style="text-align:center;font-size:14px">
+                    We are dedicated to providing a safe and inclusive environment to all riders,
+                    regardless of experience or level of knowledge about cycling!
+                </p>
+                <p style="text-align:center;font-size:16px;color:darkorange"
+                    ><b>TRIUMPH</b>
+                </p>
+                <p style="text-align:center;font-size:14px">
+                    The Center City Cycling Club places a strong emphasis on personal and team development.
+                </p>
+                <p style="text-align:center;font-size:14px">
+                    We believe that it is imperative for our club to allow for leadership to shine, and to
+                    achieve triumph and victory.
+                </p>
+            </b>
+    </div>
+    <hr>
+    <hr>
+
+
+    <b> <!--  Emails as links added GW 04/18/2020-->
+        <!-- Reference: https://www.w3schools.com/html/html_links.asp-->
+            <div style="text-align:center"> <!--Reference: http://www.nyu.edu/classes/mcdonough/fonts.htm-->
+                <p style="text-align:center;font-family:'Modern';font-size:18px">Contact Us!</p> 
+                    <h5s style="text-align:center;font-family:'Modern';font-size:14px">Griffin Wong</h5s> 
+                        <a style="color:cadetblue;font-family:'Modern';font-size:14px" href="url-align:center">gpw26@drexel.edu</a>
+                    <h5s style="text-align:center;font-family:'Modern';font-size:14px">Jacob Wong</h5s> 
+                        <a style="color:cadetblue;font-family:'Modern';font-size:14px" href="url-align:center">jw832@drexel.edu</a>
+            </div>
+        </b>
+    <hr>
+  
+    <!-- Added Facebook External Link and Changed Font GW 04/20/2020-->
+    <div style="text-align:center"> <b>
+        <p style="text-align:center">Join us on Facebook!</p>
+            <a style="font-size:16px;color:cadetblue" href="url-align:center">https://www.facebook.com/center-city-cycling-club</a>
+            <hr> 
+            <hr>
+        </b>
+    </div>  
+        
+
+    </head>
+        <body>
+            <!--added club logo JW 04/19/2020-->
+            <img img-align="center" src="cycling_pic.png" width="500" height="200" alt="image of club logo" class="marginauto"> 
+        </body>
+</html>
