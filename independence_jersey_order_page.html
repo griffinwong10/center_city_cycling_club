@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+<!--
+===================================================
+Project Name: Week 5/6 - Assignment 6 Part A/B -
+Project Description: Order page for products  
+DUE DATE: 05/12/2020 23:59:59
+LAST EDIT (DATE/TIME): 05/07/2020 01:17:15 EST GW
+Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
+===================================================
+-->
+
+<!--Order Information Form GW 05/06/2020 00:17:43 PST-->
+
+<!--HTML/CSS-->
+<!--Reference: https://www.w3schools.com/tags/tag_input.asp-->
+<!--Reference: https://www.w3schools.com/html/html_entities.asp-->
+<!--Reference: https://www.w3schools.com/tags/tag_form.asp-->
+<!--Reference: https://www.w3schools.com/tags/tag_button.asp-->
+<!--Reference: https://www.w3schools.com/cssref/pr_background-image.asp-->
+<!--Reference https://www.tutorialspoint.com/How-to-clear-all-the-input-in-HTML-forms-->
+
+<!--JavaScript-->
+<!--Reference: https://www.w3schools.com/jsref/jsref_return.asp-->
+<!--Reference: https://www.w3schools.com/js/js_comparisons.asp-->
+<!--Reference: https://www.w3schools.com/jsref/prop_checkbox_checked.asp-->
+<!--Reference: https://www.w3schools.com/js/js_if_else.asp-->
+<!--Reference: https://www.geeksforgeeks.org/else-statement-javascript/-->
+<!--Reference: http://www.tizag.com/htmlT/htmlreset.php-->
+<!--Reference: https://www.w3schools.com/jsref/met_form_reset.asp-->
+<!--Reference: https://www.w3schools.com/jsref/event_ondblclick.asp-->
+<!--Reference: https://www.w3schools.com/html/html_entities.asp-->
+
+<html lang="en">
+
+    <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
+            <div class="imageContainerTwo"></div>
+
+    <head>
+        <meta charset = "utf-8">
+        <link rel="icon" href="CCCC-C.png">
+    </head>
+
+    <body>
+        <!--ORDER INFORMATION-->
+        <form name= "order_information_form" id="order_form"> 
+            <div class="columnOne" style="background-color:#f2f2f2;margin-top:5em">
+                <div class="row">
+                    <title style="margin-top: 1000em ">Order Information</title>
+                    <br>
+                        <h2 style="font-family:'Arial'; margin-left:10px; margin-top:0em" class="first"> Order Information</h2>
+                            <p style="font-family:'Arial';font-size:12px" class="first">
+                                <b>Jersey Color: </b>&nbsp;&nbsp;
+                                <br>
+                                <input name="color" type="radio" id="color0" style="font-family:'Arial';margin-top:15px;font-size:16px;margin-left:10px" class="first"> White &nbsp;&nbsp;
+                                <input name="color" type="radio" id="color1" style="font-family:'Arial';margin-top:15px;font-size:16px;margin-left:50px" class="first"> Black &nbsp;&nbsp;
+                                <input name="color" type="radio" id="color2" style="font-family:'Arial';margin-top:15px;font-size:16px;margin-left:50px" class="first"> Grey &nbsp;&nbsp;</p> 
+                        <row class="row"> <!--Screenshot Image Size: 388,455 GW 05/06/2020-->
+                            <div class="gallery" style="margin-left: 10px">
+                                <a target="_blank" href="ind_wht.jpg">
+                                <img src="ind_wht.jpg" width="20" height="100">
+                                </a>
+                            </div>
+                            
+                            <div class="gallery">
+                                <a target="_blank" href="ind_blk.jpg">
+                                <img src="ind_blk.jpg" width="20" height="100">
+                                </a>
+                            </div>
+                            
+                            <div class="gallery">
+                                <a target="_blank" href="ind_grey.jpg">
+                                <img src="ind_grey.jpg" width="20" height="100">
+                                </a>
+                            </div>
+                        </row>
+                        <br>
+                        <row class="row">
+                            <p style="font-family:'Arial';font-size:12px" class="first">
+                                <b>Jersey Size:</b> &nbsp;&nbsp;
+                                <br>
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size0" name="size"> Extra Small &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size1" name="size"> Small &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size2" name="size" > Medium &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size3" name="size"> Large &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size4" name="size"> Extra Large &nbsp;&nbsp;</p> 
+                        </row>
+                        <br>
+                        <row class="row">
+                            <p style="font-family:'Arial';font-size:12px;" class="first">
+                                <b>Pockets:</b> &nbsp;&nbsp;
+                                <br>
+                                <input name="pocket" type="radio" id="pocket0" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 4 Pocket &nbsp;&nbsp;&nbsp
+                                <input name="pocket" type="radio" id="pocket1" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 3 Pockets &nbsp;&nbsp;&nbsp
+                                <input name="pocket" type="radio" id="pocket2" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 2 Pockets &nbsp;&nbsp;&nbsp
+                                <input name="pocket" type="radio" id="pocket3" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 1 Pocket &nbsp;&nbsp;&nbsp
+                                <input name="pocket" type="radio" id="pocket4" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> No Pockets &nbsp;&nbsp;&nbsp</p> 
+                        </row>
+                        <br>
+                        <row class="row">
+                            <p style="font-family:'Arial';font-size:12px" class="first">
+                                <b>Embroidery Location:</b> &nbsp;&nbsp;
+                                <br>
+                                <input name="emb_loc" type="radio" id="emb_loc_0" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Right Chest &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_1" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Left Chest &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_2" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Upper Back &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_3" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Lower Back &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_4" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> No Embroidery &nbsp;&nbsp;</p> 
+                        </row>
+                        <br>
+                        <row class="row">
+                            <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                                <b>Embroidery Text: &nbsp;&nbsp;</b></p>
+                                    <input name="embroidery_text" id="emb_text" size="100" height="100px"type="text" style="margin-left:10px;height:100px"></input><br>
+                        </row>
+                        <br>
+                        <br> 
+                    </div>
+                </div>
+            </form>
+        
+    <!--SHIPPING INFORMATION-->
+    <form name= "shipping_form" id="shipping_form"> 
+            <div class="columnTwo" style="background-color:#f2f2f2;margin-top:5em">
+                <br>
+                    <h2 style="font-family:'Arial'; margin-left:10px; margin-top:0em" class="first"> Shipping Information</h2>
+                        <p style="font-family:'Arial';font-size:12px" class="first">
+                            Name&nbsp;&nbsp;</p>
+                                <input name="customer_name" id="name" size="30" type="text" style="margin-left:10px"><br>
+        
+                        <p style="font-family:'Arial';font-size:12px;" class="first"><br>
+                            Email Address:&nbsp;&nbsp;</p>
+                                <input name="customer_email" id="email" size="40" type="text" style="margin-left:10px"><br> <br>
+        
+                        <p style="font-family:'Arial';;font-size:12px;" class="first">
+                            Phone: &nbsp;&nbsp;</p>
+                                <input name="customer_phone" id="phone" size="40" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Address Line 1: &nbsp;&nbsp;</p> 
+                                <input name="customer_address_one" id="addressOne" size="40" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Address Line 2: &nbsp;&nbsp;</p>
+                                <input name="customer_address_two" size="40" id="addressTwo" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            City: &nbsp;&nbsp;</p>
+                                <input name="customer_city"size="40" id="city" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            State: &nbsp;&nbsp;</p>
+                                <input name="customer_state"size="40" id="state" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Zip Code: &nbsp;&nbsp;</p>
+                                <input name="customer_zip"size="40" id="zip" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Delivery Instructions: &nbsp;&nbsp;</p>
+                                <input name="delivery_instructions" id="instructions" size="100" height="100px"type="text" style="margin-left:10px;height:97px"></input><br>
+                        <br>
+                        <br> 
+                    </div>
+                </form> 
+            <form>
+                <input type="submit" style="margin-left:69.5em;margin-top:-20emm" value="Place Order " onclick="javascript:getValues();">
+                <input type="reset" style="margin-left:69.5em;margin-top:-20em" onclick="javascript:resetOrder()" ondblclick="resetShipping()"/> 
+            </form>
+            
+            <script type="text/javascript">
+                /*This function resets the form fields, depending on the number of clicks*/
+
+
+                
+                /*This function creates a new window to print the customer's shipping information.
+                This function uses the getShippingValues helper function to pull values from the 
+                shipping_form. GW 05/06/2020*/
+
+                function resetOrder() {
+                    document.getElementById("order_form").reset();
+                }
+                
+                function resetShipping() {
+                    document.getElementById("shipping_form").reset();
+                }
+
+                function printOrder(customer_name, customer_email, customer_phone, customer_city, customer_state, customer_zip, 
+                                    delivery_instructions, address, embroidery_text, emb_loc, pocket, size, color)
+                    {
+                        var new_window;
+                        new_window=window.open("","","status=0,height=500,width=500")
+                        new_window.focus();
+                        new_window.document.write("<h1>Shipping Information</h1>" + "<br>", "Name: "+customer_name + "<br>", 
+
+                                    "Email: " + customer_email + "<br>", 
+                                    "Phone: " + customer_phone + "<br>",
+                                    "City: "+ customer_city + "<br>",
+                                    "State: "+ customer_state + "<br>",
+                                    "Zip Code: "+ customer_zip + "<br>",
+                                    "Address: "+ address + "<br>",
+                                    "Delivery Instructions: "+ delivery_instructions + "<br>",
+
+                                    "<h1>Order Information</h1>" + "<br>",
+                                    "Independence Club Jersey" + "<br>",
+                                    "Jersey Color: "+ color + "<br>",
+                                    "Jersey Size: "+ size + "<br>",
+                                    "Pocket(s): "+ pocket + "<br>",
+                                    "Embroidery Location: "+ emb_loc + "<br>",
+                                    "Embroidery Text: "+ embroidery_text + "<br>");
+
+                        new_window.close;
+                    }
+
+                function getValues()
+
+                    { /* This if-else loop should be moved to a helper-function and repeated for all values to ensure validation GW 05/07/2020*/
+
+                        /*Validate Customer Address*/
+                        address_one = document.getElementById("addressOne").value
+                        address_two = document.getElementById("addressTwo").value
+
+                        if (address_one == ""){ 
+                            if (address_two == "") {
+                                alert("Please Enter address");
+                                return;
+                            } else {
+                                alert("Test");
+                                var address = (shipping_form.customer_address_two.value);
+                            }
+
+                        } else {
+                            var address = (shipping_form.customer_address_one.value) + " " + (shipping_form.customer_address_two.value);
+                            
+                        }
+
+                        /*Validate Customer Name*/
+                        cust_name = document.getElementById("name").value
+                        if (cust_name == ""){ 
+                            alert("Please Enter Name");
+                            return;
+                        } else {
+                            var customer_name = shipping_form.customer_name.value;
+                            
+                        }
+
+                        /*Validate Customer Email*/
+                        customer_email = document.getElementById("email").value
+                        if (customer_email == "") { 
+                            alert("Please Enter Email");
+                            return;
+                        } else {
+                            var customer_email = shipping_form.customer_email.value;
+                        }
+
+                        /*Validate Customer Phone*/
+                        customer_phone = document.getElementById("phone").value
+                        if (customer_phone == "") { 
+                            alert("Please Enter Phone Number");
+                            return;
+                        } else {
+                            var customer_phone = shipping_form.customer_phone.value;
+                        }
+
+                        /*Validate Customer City*/
+                        customer_city = document.getElementById("city").value
+                        if (customer_city == "") { 
+                            alert("Please Enter City");
+                            return;
+                        } else {
+                            var customer_city = shipping_form.customer_city.value;
+                        }
+
+                        /*Validate Customer State*/
+                        customer_state = document.getElementById("state").value
+                        if (customer_state == "") { 
+                            alert("Please Enter State");
+                            return;
+                        } else {
+                            var customer_state = shipping_form.customer_state.value;
+                        }
+                        
+                        /*Validate Customer Zip Code*/
+                        customer_zip = document.getElementById("zip").value
+                        if (customer_zip == "") { 
+                            alert("Please Enter Zip Code");
+                            return;
+                        } else {
+                            var customer_zip = shipping_form.customer_zip.value;
+                        }
+                        
+                        /*Validate Delivery Instructions*/
+                        if ((document.getElementById("instructions").checked) = false){ 
+                            var delivery_instructions = "N/A";
+                            return;
+                        } else {
+                            var delivery_instructions = shipping_form.delivery_instructions.value;
+                            
+                        }
+                        instructions = document.getElementById("instructions").value
+                        if (instructions == "") { 
+                            var delivery_instructions = "N/A";
+                        } else {
+                            var delivery_instructions = shipping_form.instructions.value;
+                        }
+                        
+
+                        /*Validate Jersey Color*/
+                        if (((document.getElementById("color0").checked) == false) && ((document.getElementById("color1").checked) == false) && 
+                                ((document.getElementById("color2").checked) == false)){
+                                    alert("Please Choose a Color");
+                                    return;
+                        } else {
+                                /*Get the Value of the Jersey Color*/
+                                if ((document.getElementById("color2").checked) == true) {
+                                    var color = "Grey";
+                                }
+                                else if ((document.getElementById("color1").checked) == true) {
+                                    var color = "Black";
+                                }
+                                else if ((document.getElementById("color0").checked) == true) {
+                                    var color = "White";
+                            }
+                        }
+
+                        /* Validate Jersey Size Selection */
+                        if (((document.getElementById("size0").checked) == false) && ((document.getElementById("size1").checked) == false) && 
+                                ((document.getElementById("size2").checked) == false) && 
+                                ((document.getElementById("size3").checked) == false) && 
+                                ((document.getElementById("size4").checked) == false)){
+                                    alert("Please Choose a Size");
+                                    return;
+
+                        } else { /* Get the Value of the Jersey Size */
+                                if ((document.getElementById("size4").checked)  == true) {
+                                    var size = "Extra Large";
+                                }
+                                else if ((document.getElementById("size3").checked)  == true) {
+                                    var size = "Large";
+                                }
+                                else if ((document.getElementById("size2").checked)  == true) {
+                                    var size = "Medium";
+                                }
+                               else  if ((document.getElementById("size1").checked)  == true) {
+                                    var size = "Small";
+                                }
+                                else if ((document.getElementById("size0").checked)  == true) {
+                                    var size = "Extra Small";
+                            }
+                        }
+
+                        /* Validate Jersey Pocket Selection */
+                        if (((document.getElementById("pocket0").checked) == false) && ((document.getElementById("pocket1").checked) == false) && 
+                                ((document.getElementById("pocket2").checked) == false) && 
+                                ((document.getElementById("pocket3").checked) == false) && 
+                                ((document.getElementById("pocket4").checked) == false)){
+                                    alert("Please Choose Number of Pocket(s)");
+                                    return;
+
+                        } else { /* Get the Value of the Pockets */
+                                if ((document.getElementById("pocket4").checked)  == true) {
+                                    var pocket = "No Pockets";
+                                }
+                                else if ((document.getElementById("pocket3").checked)  == true) {
+                                    var pocket = "1 Pocket";
+                                }
+                                else if ((document.getElementById("pocket2").checked)  == true) {
+                                    var pocket = "2 Pockets";
+                                }
+                                else if ((document.getElementById("pocket1").checked)  == true) {
+                                    var pocket = "3 Pockets";
+                                }
+                                else if ((document.getElementById("pocket0").checked)  == true) {
+                                    var pocket = "4 Pockets";
+                            }
+                        }
+
+                        /* Validate Jersey Embroidery */
+                        if (((document.getElementById("emb_loc_0").checked) == false) && ((document.getElementById("emb_loc_1").checked) == false) && 
+                                ((document.getElementById("emb_loc_2").checked) == false) && 
+                                ((document.getElementById("emb_loc_3").checked) == false) && 
+                                ((document.getElementById("emb_loc_4").checked) == false)){
+                                    alert("Please Choose Location of Embroidery");
+                                    return;
+
+                        } else { /* Get the Value of the Emboidery Location */
+                            /*Get the Value of the Embroidery Location*/
+                            if ((document.getElementById("emb_loc_4").checked)  == true) {
+                                var emb_loc = "No Embroidery";
+                            }
+                            else if ((document.getElementById("emb_loc_3").checked)  == true) {
+                                var emb_loc = "Lower Back";
+                            }
+                            else if ((document.getElementById("emb_loc_2").checked)  == true) {
+                                var emb_loc = "Upper Back";
+                            }
+                            else if ((document.getElementById("emb_loc_1").checked)  == true) {
+                                var emb_loc = "Left Chest";
+                            }
+                            else if ((document.getElementById("emb_loc_0").checked)  == true) {
+                                var emb_loc = "Right Chest";
+                            }
+                        }
+
+                        /*Validate Embroidery Text*/
+                        emb_text = document.getElementById("emb_text").value
+                        
+                        if (((document.getElementById("emb_loc_0").checked) == true) || 
+                                ((document.getElementById("emb_loc_1").checked) == true) || 
+                                ((document.getElementById("emb_loc_2").checked) == true) || 
+                                ((document.getElementById("emb_loc_3").checked) == true))
+
+                                { if (emb_text == ""){ 
+                                    alert("Please Enter Your Embroidery Text");
+                                    return;
+
+                                }  else {
+                                    var embroidery_text = order_form.embroidery_text.value;
+                                }
+                            } else {
+                            var embroidery_text = "N/A"
+                        }
+
+                        printOrder(customer_name, customer_email, customer_phone, 
+                                    customer_city, customer_state, customer_zip, 
+                                    delivery_instructions, address, embroidery_text, 
+                                    emb_loc, pocket, size, color);
+
+                    }
+            </script>
+    </body>
+</html>
