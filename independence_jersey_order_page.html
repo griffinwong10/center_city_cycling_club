@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <!--
-===================================================
+=======================================================
 Project Name: Week 5/6 - Assignment 6 Part A/B -
-Project Description: Order page for products  
+Project Description: Order page for Independence Jersey  
 DUE DATE: 05/12/2020 23:59:59
-LAST EDIT (DATE/TIME): 05/07/2020 01:17:15 EST GW
+LAST EDIT (DATE/TIME): 05/09/2020 01:17:15 EST GW
 Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
-===================================================
+=======================================================
 -->
 
 <!--Order Information Form GW 05/06/2020 00:17:43 PST-->
@@ -164,25 +164,28 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                 </form> 
             <form>
                 <input type="submit" style="margin-left:69.5em;margin-top:-20emm" value="Place Order " onclick="javascript:getValues();">
-                <input type="reset" style="margin-left:69.5em;margin-top:-20em" onclick="javascript:resetOrder()" ondblclick="resetShipping()"/> 
+                <input type="reset" style="margin-left:69.5em;margin-top:-20em" onclick="javascript:resetForm()"/> 
             </form>
             
             <script type="text/javascript">
-                /*This function resets the form fields, depending on the number of clicks*/
 
+                // This function resets the form fields, depending on the number of clicks GW 05/09/2020
+                reset_count = 0
 
-                
+                function resetForm() {
+                    if (reset_count == 0 ) {
+                        reset_count += 1
+                        document.getElementById("order_form").reset();
+                    } else if (reset_count == 1) {
+                        reset_count += 1
+                        document.getElementById("shipping_form").reset();
+                        reset_count = 0
+                    }
+                }
+
                 /*This function creates a new window to print the customer's shipping information.
                 This function uses the getShippingValues helper function to pull values from the 
-                shipping_form. GW 05/06/2020*/
-
-                function resetOrder() {
-                    document.getElementById("order_form").reset();
-                }
-                
-                function resetShipping() {
-                    document.getElementById("shipping_form").reset();
-                }
+                shipping_form. GW 05/09/2020*/
 
                 function printOrder(customer_name, customer_email, customer_phone, customer_city, customer_state, customer_zip, 
                                     delivery_instructions, address, embroidery_text, emb_loc, pocket, size, color)
@@ -211,106 +214,20 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                         new_window.close;
                     }
 
+                // This function validates and gets the values for all of the form fields
+                // The order information is validated first, in sequential order to ensure 
+                // that the error thrown is based on the first missing field
+                // GW 05/09/2020
+
                 function getValues()
-
-                    { /* This if-else loop should be moved to a helper-function and repeated for all values to ensure validation GW 05/07/2020*/
-
-                        /*Validate Customer Address*/
-                        address_one = document.getElementById("addressOne").value
-                        address_two = document.getElementById("addressTwo").value
-
-                        if (address_one == ""){ 
-                            if (address_two == "") {
-                                alert("Please Enter address");
-                                return;
-                            } else {
-                                alert("Test");
-                                var address = (shipping_form.customer_address_two.value);
-                            }
-
-                        } else {
-                            var address = (shipping_form.customer_address_one.value) + " " + (shipping_form.customer_address_two.value);
-                            
-                        }
-
-                        /*Validate Customer Name*/
-                        cust_name = document.getElementById("name").value
-                        if (cust_name == ""){ 
-                            alert("Please Enter Name");
-                            return;
-                        } else {
-                            var customer_name = shipping_form.customer_name.value;
-                            
-                        }
-
-                        /*Validate Customer Email*/
-                        customer_email = document.getElementById("email").value
-                        if (customer_email == "") { 
-                            alert("Please Enter Email");
-                            return;
-                        } else {
-                            var customer_email = shipping_form.customer_email.value;
-                        }
-
-                        /*Validate Customer Phone*/
-                        customer_phone = document.getElementById("phone").value
-                        if (customer_phone == "") { 
-                            alert("Please Enter Phone Number");
-                            return;
-                        } else {
-                            var customer_phone = shipping_form.customer_phone.value;
-                        }
-
-                        /*Validate Customer City*/
-                        customer_city = document.getElementById("city").value
-                        if (customer_city == "") { 
-                            alert("Please Enter City");
-                            return;
-                        } else {
-                            var customer_city = shipping_form.customer_city.value;
-                        }
-
-                        /*Validate Customer State*/
-                        customer_state = document.getElementById("state").value
-                        if (customer_state == "") { 
-                            alert("Please Enter State");
-                            return;
-                        } else {
-                            var customer_state = shipping_form.customer_state.value;
-                        }
-                        
-                        /*Validate Customer Zip Code*/
-                        customer_zip = document.getElementById("zip").value
-                        if (customer_zip == "") { 
-                            alert("Please Enter Zip Code");
-                            return;
-                        } else {
-                            var customer_zip = shipping_form.customer_zip.value;
-                        }
-                        
-                        /*Validate Delivery Instructions*/
-                        if ((document.getElementById("instructions").checked) = false){ 
-                            var delivery_instructions = "N/A";
-                            return;
-                        } else {
-                            var delivery_instructions = shipping_form.delivery_instructions.value;
-                            
-                        }
-                        instructions = document.getElementById("instructions").value
-                        if (instructions == "") { 
-                            var delivery_instructions = "N/A";
-                        } else {
-                            var delivery_instructions = shipping_form.instructions.value;
-                        }
-                        
-
-                        /*Validate Jersey Color*/
+                    { 
+                        // Validate Jersey Color GW 05/09/2020
                         if (((document.getElementById("color0").checked) == false) && ((document.getElementById("color1").checked) == false) && 
                                 ((document.getElementById("color2").checked) == false)){
                                     alert("Please Choose a Color");
                                     return;
                         } else {
-                                /*Get the Value of the Jersey Color*/
+                                // Get the Value of the Jersey Color GW 05/09/2020
                                 if ((document.getElementById("color2").checked) == true) {
                                     var color = "Grey";
                                 }
@@ -322,7 +239,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             }
                         }
 
-                        /* Validate Jersey Size Selection */
+                        // Validate Jersey Size Selection GW 05/09/2020
                         if (((document.getElementById("size0").checked) == false) && ((document.getElementById("size1").checked) == false) && 
                                 ((document.getElementById("size2").checked) == false) && 
                                 ((document.getElementById("size3").checked) == false) && 
@@ -330,7 +247,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                                     alert("Please Choose a Size");
                                     return;
 
-                        } else { /* Get the Value of the Jersey Size */
+                        } else { // Get the Value of the Jersey Size GW 05/09/2020
                                 if ((document.getElementById("size4").checked)  == true) {
                                     var size = "Extra Large";
                                 }
@@ -348,7 +265,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             }
                         }
 
-                        /* Validate Jersey Pocket Selection */
+                        // Validate Jersey Pocket Selection GW 05/09/2020
                         if (((document.getElementById("pocket0").checked) == false) && ((document.getElementById("pocket1").checked) == false) && 
                                 ((document.getElementById("pocket2").checked) == false) && 
                                 ((document.getElementById("pocket3").checked) == false) && 
@@ -356,7 +273,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                                     alert("Please Choose Number of Pocket(s)");
                                     return;
 
-                        } else { /* Get the Value of the Pockets */
+                        } else { // Get the Value of the Pockets GW 05/09/2020
                                 if ((document.getElementById("pocket4").checked)  == true) {
                                     var pocket = "No Pockets";
                                 }
@@ -374,7 +291,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             }
                         }
 
-                        /* Validate Jersey Embroidery */
+                        // Validate Jersey Embroidery GW 05/09/2020
                         if (((document.getElementById("emb_loc_0").checked) == false) && ((document.getElementById("emb_loc_1").checked) == false) && 
                                 ((document.getElementById("emb_loc_2").checked) == false) && 
                                 ((document.getElementById("emb_loc_3").checked) == false) && 
@@ -382,8 +299,9 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                                     alert("Please Choose Location of Embroidery");
                                     return;
 
-                        } else { /* Get the Value of the Emboidery Location */
-                            /*Get the Value of the Embroidery Location*/
+                        } else { // Get the Value of the Emboidery Location GW 05/09/2020
+
+                            // Get the Value of the Embroidery Location GW 05/09/2020
                             if ((document.getElementById("emb_loc_4").checked)  == true) {
                                 var emb_loc = "No Embroidery";
                             }
@@ -401,7 +319,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             }
                         }
 
-                        /*Validate Embroidery Text*/
+                        // Validate Embroidery Text GW 05/09/2020
                         emb_text = document.getElementById("emb_text").value
                         
                         if (((document.getElementById("emb_loc_0").checked) == true) || 
@@ -420,11 +338,93 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             var embroidery_text = "N/A"
                         }
 
+                        // Validate Customer Address GW 05/09/2020
+                        address_one = document.getElementById("addressOne").value
+                        address_two = document.getElementById("addressTwo").value
+
+                        if (address_one == ""){ 
+                            if (address_two == "") {
+                                alert("Please Enter address");
+                                return;
+                            } else {
+                                alert("Test");
+                                var address = (shipping_form.customer_address_two.value);
+                            }
+
+                        } else {
+                            var address = (shipping_form.customer_address_one.value) + " " + (shipping_form.customer_address_two.value);
+                            
+                        }
+
+                        // Validate Customer Name GW 05/09/2020
+                        cust_name = document.getElementById("name").value
+                        if (cust_name == ""){ 
+                            alert("Please Enter Name");
+                            return;
+                        } else {
+                            var customer_name = shipping_form.customer_name.value;
+                            
+                        }
+
+                        // Validate Customer Email GW 05/09/2020
+                        customer_email = document.getElementById("email").value
+                        if (customer_email == "") { 
+                            alert("Please Enter Email");
+                            return;
+                        } else {
+                            var customer_email = shipping_form.customer_email.value;
+                        }
+
+                        // Validate Customer Phone GW 05/09/2020
+                        customer_phone = document.getElementById("phone").value
+                        if (customer_phone == "") { 
+                            alert("Please Enter Phone Number");
+                            return;
+                        } else {
+                            var customer_phone = shipping_form.customer_phone.value;
+                        }
+
+                        // Validate Customer City GW 05/09/2020
+                        customer_city = document.getElementById("city").value
+                        if (customer_city == "") { 
+                            alert("Please Enter City");
+                            return;
+                        } else {
+                            var customer_city = shipping_form.customer_city.value;
+                        }
+
+                        // Validate Customer State GW 05/09/2020
+                        customer_state = document.getElementById("state").value
+                        if (customer_state == "") { 
+                            alert("Please Enter State");
+                            return;
+                        } else {
+                            var customer_state = shipping_form.customer_state.value;
+                        }
+                        
+                        // Validate Customer Zip Code GW 05/09/2020
+                        customer_zip = document.getElementById("zip").value
+                        if (customer_zip == "") { 
+                            alert("Please Enter Zip Code");
+                            return;
+                        } else {
+                            var customer_zip = shipping_form.customer_zip.value;
+                        }
+                        
+                        // Validate Delivery Instructions GW 05/09/2020
+                        if ((document.getElementById("instructions").checked) = false){ 
+                            var delivery_instructions = "N/A";
+                            return;
+                        } else {
+                            var delivery_instructions = shipping_form.delivery_instructions.value;
+                            
+                        }
+
+                        // Print the order confirmation form GW 05/09/2020
                         printOrder(customer_name, customer_email, customer_phone, 
                                     customer_city, customer_state, customer_zip, 
                                     delivery_instructions, address, embroidery_text, 
                                     emb_loc, pocket, size, color);
-
                     }
             </script>
     </body>
