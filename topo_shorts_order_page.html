@@ -1,0 +1,443 @@
+<!DOCTYPE HTML>
+<!--
+===================================================
+Project Name: Week 5/6 - Assignment 6 Part A/B -
+Project Description: Order page for Topo Shorts  
+DUE DATE: 05/13/2020 23:59:59
+LAST EDIT (DATE/TIME): 05/09/2020 01:17:15 EST GW
+Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
+===================================================
+-->
+
+<!--HTML/CSS-->
+<!--Reference: https://www.w3schools.com/tags/tag_input.asp-->
+<!--Reference: https://www.w3schools.com/html/html_entities.asp-->
+<!--Reference: https://www.w3schools.com/tags/tag_form.asp-->
+<!--Reference: https://www.w3schools.com/tags/tag_button.asp-->
+<!--Reference: https://www.w3schools.com/cssref/pr_background-image.asp-->
+<!--Reference https://www.tutorialspoint.com/How-to-clear-all-the-input-in-HTML-forms-->
+
+<!--JavaScript-->
+<!--Reference: https://www.w3schools.com/jsref/jsref_return.asp-->
+<!--Reference: https://www.w3schools.com/js/js_comparisons.asp-->
+<!--Reference: https://www.w3schools.com/jsref/prop_checkbox_checked.asp-->
+<!--Reference: https://www.w3schools.com/js/js_if_else.asp-->
+<!--Reference: https://www.geeksforgeeks.org/else-statement-javascript/-->
+<!--Reference: http://www.tizag.com/htmlT/htmlreset.php-->
+<!--Reference: https://www.w3schools.com/jsref/met_form_reset.asp-->
+<!--Reference: https://www.w3schools.com/jsref/event_ondblclick.asp-->
+<!--Reference: https://www.w3schools.com/html/html_entities.asp-->
+
+<html lang="en">
+
+    <head>
+        <meta charset = "utf-8">
+        <link rel="icon" href="CCCC-C.png">
+        <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
+        <div class="imageContainerTwo"></div>
+    </head>
+
+    <body>
+    
+        <!--ORDER INFORMATION-->
+        <form name= "order_information_form" id="order_form"> 
+            <div class="columnOne" style="background-color:#f2f2f2;margin-top:5em">
+                <div class="row">
+                    <title style="margin-top: 1000em ">Order Information</title>
+                    <br>
+                        <h2 style="font-family:'Arial'; margin-left:10px; margin-top:0em" class="first"> Order Information</h2>
+                            <p style="font-family:'Arial';font-size:12px" class="first">
+                                <b>Shorts Color: </b>&nbsp;&nbsp;
+                                <br>
+                                <input name="color" type="radio" id="color0" style="font-family:'Arial';margin-top:15px;font-size:16px;margin-left:10px" class="first"> White &nbsp;&nbsp;
+                                <input name="color" type="radio" id="color1" style="font-family:'Arial';margin-top:15px;font-size:16px;margin-left:50px" class="first"> Black &nbsp;&nbsp;
+                                <input name="color" type="radio" id="color2" style="font-family:'Arial';margin-top:15px;font-size:16px;margin-left:50px" class="first"> Grey &nbsp;&nbsp;</p> 
+                        <row class="row"> <!--Screenshot Image Size: 388,455 GW 05/06/2020-->
+                            <div class="gallery" style="margin-left: 10px">
+                                <a target="_blank" href="ind_wht.jpg">
+                                <img src="topo_shorts_wht.png" width="20" height="100">
+                                </a>
+                            </div>
+                            
+                            <div class="gallery">
+                                <a target="_blank" href="ind_blk.jpg">
+                                <img src="topo_shorts_blk.png" width="20" height="100">
+                                </a>
+                            </div>
+                            
+                            <div class="gallery">
+                                <a target="_blank" href="ind_grey.jpg">
+                                <img src="topo_shorts_gry.png" width="20" height="100">
+                                </a>
+                            </div>
+                        </row>
+                        <br>
+                        <row class="row">
+                            <p style="font-family:'Arial';font-size:12px" class="first">
+                                <b>Short Size:</b> &nbsp;&nbsp;
+                                <br>
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size0" name="size"> Extra Small &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size1" name="size"> Small &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size2" name="size" > Medium &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size3" name="size"> Large &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size4" name="size"> Extra Large &nbsp;&nbsp;</p> 
+                        </row>
+                        <br>
+                        <row class="row">
+                            <p style="font-family:'Arial';font-size:12px" class="first">
+                                <b>Embroidery Location:</b> &nbsp;&nbsp;
+                                <br>
+                                <input name="emb_loc" type="radio" id="emb_loc_0" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Upper R Thigh &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_1" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Upper L Thigh &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_2" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Lower R Thigh &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_3" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Lower L Thigh &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_4" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> No Embroidery &nbsp;&nbsp;</p> 
+                        </row>
+                        <br>
+                        <row class="row">
+                            <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                                <b>Embroidery Text: &nbsp;&nbsp;</b></p>
+                                    <input name="embroidery_text" id="emb_text" size="100" height="100px"type="text" style="margin-left:10px;height:100px"></input><br>
+                        </row>
+                        <br>
+                        <br> 
+                    </div>
+                </div>
+            </form>
+        
+    <!--SHIPPING INFORMATION-->
+    <form name= "shipping_form" id="shipping_form"> 
+            <div class="columnTwo" style="background-color:#f2f2f2;margin-top:5em">
+                <br>
+                    <h2 style="font-family:'Arial'; margin-left:10px; margin-top:0em" class="first"> Shipping Information</h2>
+                        <p style="font-family:'Arial';font-size:12px" class="first">
+                            Name&nbsp;&nbsp;</p>
+                                <input name="customer_name" id="name" size="30" type="text" style="margin-left:10px"><br>
+        
+                        <p style="font-family:'Arial';font-size:12px;" class="first"><br>
+                            Email Address:&nbsp;&nbsp;</p>
+                                <input name="customer_email" id="email" size="40" type="text" style="margin-left:10px"><br> <br>
+        
+                        <p style="font-family:'Arial';;font-size:12px;" class="first">
+                            Phone: &nbsp;&nbsp;</p>
+                                <input name="customer_phone" id="phone" size="40" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Address Line 1: &nbsp;&nbsp;</p> 
+                                <input name="customer_address_one" id="addressOne" size="40" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Address Line 2: &nbsp;&nbsp;</p>
+                                <input name="customer_address_two" size="40" id="addressTwo" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            City: &nbsp;&nbsp;</p>
+                                <input name="customer_city"size="40" id="city" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';font-size:12px;margin-left:10px">State: &nbsp;&nbsp;</p>
+                            <select name="customer_state"id="state" style="margin-left:10px">
+                                <option value="Select">Select</option>
+                                <option value="AL">AL - Alabama</option>
+                                <option value="AK">AK - Alaska</option>
+                                <option value="AR">AR - Arkansas</option>
+                                <option value="CA">CA - California</option>
+                                <option value="CO">CO - Colorado</option>
+                                <option value="CT">CT - Connecticut</option>
+                                <option value="DE">DE - Delaware</option>
+                                <option value="FL">FL - Florida</option>
+                                <option value="GA">GA - Georgia</option>
+                                <option value="HI">HI - Hawaii</option>
+                                <option value="ID">ID - Idaho</option>
+                                <option value="IL">IL - Illinois</option>
+                                <option value="IN">IN - Indiana</option>
+                                <option value="IA">IA - Iowa</option>
+                                <option value="KS">KS - Kansas</option>
+                                <option value="KY">KY - Kentucky</option>
+                                <option value="LA">LA - Louisiana</option>
+                                <option value="ME">ME - Maine</option>
+                                <option value="MD">MD - Maryland</option>
+                                <option value="MA">MA - Massachusetts</option>
+                                <option value="MI">MI - Michigan</option>
+                                <option value="MN">MN - Minnesota</option>
+                                <option value="MS">MS - Mississippi</option>
+                                <option value="MO">MO - Missouri</option>
+                                <option value="MT">MT - Montana</option>
+                                <option value="NE">NE - Nebraska</option>
+                                <option value="NV">NV - Nevada</option>
+                                <option value="NH">NH - New Hampshire</option>
+                                <option value="NJ">NJ - New Jersey</option>
+                                <option value="NM">NM - New Mexico</option>
+                                <option value="NY">NY - New York</option>
+                                <option value="NC">NC - North Carolina</option>
+                                <option value="ND">ND - North Dakota</option>
+                                <option value="OH">OH - Ohio</option>
+                                <option value="OK">OK - Oklahoma</option>
+                                <option value="OR">OR - Oregon</option>
+                                <option value="PA">PA - Pennsylvania</option>
+                                <option value="RI">RI - Rhode Island</option>
+                                <option value="SC">SC - South Carolina</option>
+                                <option value="SD">SD - South Dakota</option>
+                                <option value="TN">TN - Tennessee</option>
+                                <option value="TX">TX - Texas</option>
+                                <option value="UT">UT - Utah</option>
+                                <option value="VT">VT - Vermont</option>
+                                <option value="VA">VA - Virginia</option>
+                                <option value="WA">WA - Washington</option>
+                                <option value="WV">WV - West Virginia</option>
+                                <option value="WI">WI - Wisconsin</option>
+                                <option value="WY">WY - Wyoming</option>
+                            </select>
+    
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Zip Code: &nbsp;&nbsp;</p>
+                                <input name="customer_zip"size="40" id="zip" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Delivery Instructions: &nbsp;&nbsp;</p>
+                                <input name="delivery_instructions" id="instructions" size="100" height="100px"type="text" style="margin-left:10px;height:97px"></input><br>
+                        <br>
+                        <br> 
+                    </div>
+                </form> 
+            <form>
+                <input type="submit" style="margin-left:69.5em;margin-top:-20emm" value="Place Order " onclick="javascript:getValues();">
+                <input type="reset" style="margin-left:69.5em;margin-top:-20em" onclick="javascript:resetForm()"/> 
+            </form>
+            
+            <script type="text/javascript">
+                /*This function resets the form fields, depending on the number of clicks*/
+                /*This function creates a new window to print the customer's shipping information.
+                This function uses the getShippingValues helper function to pull values from the 
+                shipping_form. GW 05/06/2020*/
+
+                reset_count = 0
+
+                function resetForm() {
+                    if (reset_count == 0 ) {
+                        reset_count += 1
+                        document.getElementById("order_form").reset();
+                    } else if (reset_count == 1) {
+                        reset_count += 1
+                        document.getElementById("shipping_form").reset();
+                        reset_count = 0
+                    }
+                }
+
+                function printOrder(customer_name, customer_email, customer_phone, customer_city, customer_state, customer_zip, 
+                                    delivery_instructions, address, embroidery_text, emb_loc, size, color)
+                    {
+                        var new_window;
+                        new_window=window.open("","","status=0,height=600,width=600")
+                        new_window.focus();
+                        new_window.document.write("<h1>Center City Cycling Club</h1>"  + "<br>", 
+                            "<h2>Shipping Information</h2>" + "<br>", "Name: "+customer_name + "<br>", 
+
+                            "Email: " + customer_email + "<br>", 
+                            "Phone: " + customer_phone + "<br>",
+                            "City: "+ customer_city + "<br>",
+                            "State: "+ customer_state + "<br>",
+                            "Zip Code: "+ customer_zip + "<br>",
+                            "Address: "+ address + "<br>",
+                            "Delivery Instructions: "+ delivery_instructions + "<br>",
+
+                            "<h2>Order Information</h2>" + "<br>",
+                            "Topography Shorts "+ "<br>",
+                            "Short Color: "+ color + "<br>",
+                            "Short Size: "+ size + "<br>",
+                            "Embroidery Location: "+ emb_loc + "<br>",
+                            "Embroidery Text: "+ embroidery_text + "<br>");
+
+                        new_window.close;
+                    }
+
+                // This function validates and gets the values for all of the form fields
+                // The order information is validated first, in sequential order to ensure 
+                // that the error thrown is based on the first missing field
+                // GW 05/09/2020
+                
+                function getValues()
+                    { 
+                        /*====================================ORDER INFORMATION====================================*/
+                        /*Validate Short Color*/
+                        if (((document.getElementById("color0").checked) == false) && ((document.getElementById("color1").checked) == false) && 
+                                ((document.getElementById("color2").checked) == false)){
+                                    alert("Please Choose a Color");
+                                    return;
+                        } else {
+                                /*Get the Value of the Shorts Color*/
+                                if ((document.getElementById("color2").checked) == true) {
+                                    var color = "Grey";
+                                }
+                                else if ((document.getElementById("color1").checked) == true) {
+                                    var color = "Black";
+                                }
+                                else if ((document.getElementById("color0").checked) == true) {
+                                    var color = "White";
+                            }
+                        }
+
+                        // Validate Short Size Selection GW 05/09/2020
+                        if (((document.getElementById("size0").checked) == false) && ((document.getElementById("size1").checked) == false) && 
+                                ((document.getElementById("size2").checked) == false) && 
+                                ((document.getElementById("size3").checked) == false) && 
+                                ((document.getElementById("size4").checked) == false)){
+                                    alert("Please Choose a Size");
+                                    return;
+
+                        } else { // Get the Value of the Jersey Size  GW 05/09/2020
+                                if ((document.getElementById("size4").checked)  == true) {
+                                    var size = "Extra Large";
+                                }
+                                else if ((document.getElementById("size3").checked)  == true) {
+                                    var size = "Large";
+                                }
+                                else if ((document.getElementById("size2").checked)  == true) {
+                                    var size = "Medium";
+                                }
+                               else  if ((document.getElementById("size1").checked)  == true) {
+                                    var size = "Small";
+                                }
+                                else if ((document.getElementById("size0").checked)  == true) {
+                                    var size = "Extra Small";
+                            }
+                        }
+
+                        // Validate Shorts Embroidery  GW 05/09/2020
+                        if (((document.getElementById("emb_loc_0").checked) == false) && ((document.getElementById("emb_loc_1").checked) == false) && 
+                                ((document.getElementById("emb_loc_2").checked) == false) && 
+                                ((document.getElementById("emb_loc_3").checked) == false) && 
+                                ((document.getElementById("emb_loc_4").checked) == false)){
+                                    alert("Please Choose Location of Embroidery");
+                                    return;
+
+                        } else { //Get the Value of the Emboidery Location GW 05/09/2020 
+
+                            // Get the Value of the Embroidery Location GW 05/09/2020
+                            if ((document.getElementById("emb_loc_4").checked)  == true) {
+                                var emb_loc = "No Embroidery";
+                            }
+                            else if ((document.getElementById("emb_loc_3").checked)  == true) {
+                                var emb_loc = "Lower Left Thigh";
+                            }
+                            else if ((document.getElementById("emb_loc_2").checked)  == true) {
+                                var emb_loc = "Lower Right Thigh";
+                            }
+                            else if ((document.getElementById("emb_loc_1").checked)  == true) {
+                                var emb_loc = "Upper Left Thigh";
+                            }
+                            else if ((document.getElementById("emb_loc_0").checked)  == true) {
+                                var emb_loc = "Upper Rigth Thigh";
+                            }
+                        }
+                        
+                        // Validate Embroidery Text  GW 05/09/2020
+                        emb_text = document.getElementById("emb_text").value
+                        
+                        if (((document.getElementById("emb_loc_0").checked) == true) || 
+                                ((document.getElementById("emb_loc_1").checked) == true) || 
+                                ((document.getElementById("emb_loc_2").checked) == true) || 
+                                ((document.getElementById("emb_loc_3").checked) == true))
+
+                                { if (emb_text == ""){ 
+                                    alert("Please Enter Your Embroidery Text");
+                                    return;
+
+                                }  else {
+                                    var embroidery_text = order_form.embroidery_text.value;
+                                }
+                            } else {
+                            var embroidery_text = "N/A"
+                        }
+
+                /*=================ORDER INFORMATION======================*/
+
+                        // Validate Customer Name  GW 05/09/2020
+                        cust_name = document.getElementById("name").value
+                        if (cust_name == ""){ 
+                            alert("Please Enter Name");
+                            return;
+                        } else {
+                            var customer_name = shipping_form.customer_name.value;
+                            
+                        }
+
+                        // Validate Customer Email  GW 05/09/2020
+                        customer_email = document.getElementById("email").value
+                        if (customer_email == "") { 
+                            alert("Please Enter Email");
+                            return;
+                        } else {
+                            var customer_email = shipping_form.customer_email.value;
+                        }
+
+                        // Validate Customer Phone  GW 05/09/2020
+                        customer_phone = document.getElementById("phone").value
+                        if (customer_phone == "") { 
+                            alert("Please Enter Phone Number");
+                            return;
+                        } else {
+                            var customer_phone = shipping_form.customer_phone.value;
+                        }
+
+                        // Validate Customer Address  GW 05/09/2020
+                        address_one = document.getElementById("addressOne").value
+                        address_two = document.getElementById("addressTwo").value
+
+                        if (address_one == ""){ 
+                            if (address_two == "") {
+                                alert("Please Enter address");
+                                return;
+                            } else {
+                                alert("Test");
+                                var address = (shipping_form.customer_address_two.value);
+                            }
+                        } else {
+                            var address = (shipping_form.customer_address_one.value) + " " + (shipping_form.customer_address_two.value);
+                        }
+
+                        // Validate Customer City  GW 05/09/2020
+                        customer_city = document.getElementById("city").value
+                        if (customer_city == "") { 
+                            alert("Please Enter City");
+                            return;
+                        } else {
+                            var customer_city = shipping_form.customer_city.value;
+                        }
+
+                        // Validate the customer state GW 05/10/2020
+                        var selectedState = document.getElementById ("state");
+                        var state = selectedState.options[selectedState.selectedIndex].text;
+                        if (state == "Select") {
+                            alert("Please choose a state.");
+                            return;
+                        } else {
+                            state = state
+                        }
+                        
+                        // Validate Customer Zip Code  GW 05/09/2020
+                        customer_zip = document.getElementById("zip").value
+                        if (customer_zip == "") { 
+                            alert("Please Enter Zip Code");
+                            return;
+                        } else {
+                            var customer_zip = shipping_form.customer_zip.value;
+                        }
+                        
+                        // Validate Delivery Instructions  GW 05/09/2020
+                        if ((document.getElementById("instructions").checked) = false){ 
+                            var delivery_instructions = "N/A";
+                            return;
+                        } else {
+                            var delivery_instructions = shipping_form.delivery_instructions.value;
+                            
+                        }
+
+                        // Print the order confirmation form  GW 05/09/2020
+                        printOrder(customer_name, customer_email, customer_phone, 
+                                    customer_city, state, customer_zip, 
+                                    delivery_instructions, address, embroidery_text, 
+                                    emb_loc, size, color);
+                    }
+            </script>
+    </body>
+</html>
