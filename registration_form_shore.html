@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!--
+=========================================
+Project Name: Registration Form
+Project Description: This will be the registration form the users will
+fill out to register for our club hosted events 
+Last Edit Date: 5/11/2020 GW
+Due Date:  05/13/2020
+Programmer Name: Jacob Wong & Griffin Wong
+==========================================
+-->
+<html lang="en">
+    <!--Registration form JW 05/07/2020-->
+    <head> <!--Reformatted the header and added icon image GW 05/09/2020-->
+        <meta charset = "utf-8">
+        <link rel="icon" href="CCCC-C.png">
+        <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
+        <title>Tour the Shore | CCCC Events</title><br><br>
+    </head>
+
+    <body style="font-family: 'Arial'">
+        <div class="imageContainerTwo"></div>
+        <h1 style="text-align:center;font-family: 'Roboto Condensed', sans-serif;color:darkorange">Tour the Shore Event Registration</h1>
+        <form name="registration" id="registration_form">
+            <div>		
+                <h3 style="color:darkorange">Who Are You Registering?</h3>
+                <input name="who" id="who0" type="radio"value="Me">Myself (Adult)
+                <input name="who" id="who1" type="radio"value="Other Adult">Other (Adult)
+                <input name="who" id="who2" type="radio"value="Minor"> Minor
+            </div>
+
+            <div>
+                <h3 style="color:darkorange"> Basic Information</h3>
+                <p>
+                First Name:&nbsp;&nbsp;<input name="first" id="first" size="30" type="text">
+                Last Name:&nbsp;&nbsp;<input name="last" id="last" size="30" type="text"></input><br>
+                </p>
+                <p>	
+                Email Address:&nbsp;&nbsp;<input name="email" id="email" size="30" type="text">
+                Confirm Email Address:&nbsp;&nbsp;<input name="confirm" id="confirm" size="30" type="text"</input><br>
+                </p>
+            </div>
+
+            <div>
+                <h3 style="color:darkorange">Additional Information</h3>
+                <p>
+                <input name="gender" id="gender0" type="radio" value="male">Male
+                <input name="gender" id="gender1" type="radio" value="female">Female
+                </p>
+                <p>
+                Date of Birth:&nbsp;&nbsp;<input name="dob" id="dob" placeholder="mm/dd/yyyy"size="20" type="text"><br>
+                </p>
+                <p>
+                Phone Number:&nbsp;&nbsp;<input name="phone" id="phone" placeholder="###-###-####" size="20"type="text">
+                </p>
+            </div>
+                
+            <div>
+                <h3 style="color:darkorange">Address</h3>
+                <p>
+                Street Address: &nbsp;&nbsp;<input name="address" id="address" size="20"type="text">
+                City: &nbsp;&nbsp;<input name="city" id="city" size="20"type="text">
+                State: &nbsp;&nbsp;<select name="states" id="states">
+                <option value="Select">Select</option>
+                <option value="AL">AL - Alabama</option>
+                <option value="AK">AK - Alaska</option>
+                <option value="AR">AR - Arkansas</option>
+                <option value="CA">CA - California</option>
+                <option value="CO">CO - Colorado</option>
+                <option value="CT">CT - Connecticut</option>
+                <option value="DE">DE - Delaware</option>
+                <option value="FL">FL - Florida</option>
+                <option value="GA">GA - Georgia</option>
+                <option value="HI">HI - Hawaii</option>
+                <option value="ID">ID - Idaho</option>
+                <option value="IL">IL - Illinois</option>
+                <option value="IN">IN - Indiana</option>
+                <option value="IA">IA - Iowa</option>
+                <option value="KS">KS - Kansas</option>
+                <option value="KY">KY - Kentucky</option>
+                <option value="LA">LA - Louisiana</option>
+                <option value="ME">ME - Maine</option>
+                <option value="MD">MD - Maryland</option>
+                <option value="MA">MA - Massachusetts</option>
+                <option value="MI">MI - Michigan</option>
+                <option value="MN">MN - Minnesota</option>
+                <option value="MS">MS - Mississippi</option>
+                <option value="MO">MO - Missouri</option>
+                <option value="MT">MT - Montana</option>
+                <option value="NE">NE - Nebraska</option>
+                <option value="NV">NV - Nevada</option>
+                <option value="NH">NH - New Hampshire</option>
+                <option value="NJ">NJ - New Jersey</option>
+                <option value="NM">NM - New Mexico</option>
+                <option value="NY">NY - New York</option>
+                <option value="NC">NC - North Carolina</option>
+                <option value="ND">ND - North Dakota</option>
+                <option value="OH">OH - Ohio</option>
+                <option value="OK">OK - Oklahoma</option>
+                <option value="OR">OR - Oregon</option>
+                <option value="PA">PA - Pennsylvania</option>
+                <option value="RI">RI - Rhode Island</option>
+                <option value="SC">SC - South Carolina</option>
+                <option value="SD">SD - South Dakota</option>
+                <option value="TN">TN - Tennessee</option>
+                <option value="TX">TX - Texas</option>
+                <option value="UT">UT - Utah</option>
+                <option value="VT">VT - Vermont</option>
+                <option value="VA">VA - Virginia</option>
+                <option value="WA">WA - Washington</option>
+                <option value="WV">WV - West Virginia</option>
+                <option value="WI">WI - Wisconsin</option>
+                <option value="WY">WY - Wyoming</option>
+                </select>
+                </p>
+                </input>
+
+                <p>
+                Country:&nbsp;&nbsp;<input name="Country" id="country" size="20"type="text">
+                Zipcode:&nbsp;&nbsp;<input name="zipcode" id="zipcode" size="20"type="text"/>
+                </p>
+            </div>
+        </form>
+
+        <form name="event" id="event_form">
+		
+			<div>
+				<h3 style="color:darkorange;font-family: 'Arial'">Email Notification</h3>
+				<p style="font-family: 'Arial';text-align:left">
+					Would you like email notifications about our future events?
+				</p>
+				<input name="notify" id="notify0" type="radio" value="Yes">Yes
+				<input name="notify" id="notify1" type="radio" value="No">No 
+			</div>	
+	
+			<div>
+				<h3 style="color:darkorange;font-family: 'Arial'">Free Items With Registration</h3>	
+				<p style="font-family: 'Arial';text-align:left">   
+				Performance T-Shirt : &nbsp;&nbsp;<select name="shirt" id="shirt">
+                <option value="Select">Select Size</option>
+                <option value="XS">XS - Extra Small</option>
+                <option value="S">S - Small</option>
+                <option value="M">M - Medium</option>
+                <option value="L">L - Large</option>
+                <option value="XL">XL - Extra Large</option>
+				</select>&nbsp;&nbsp;&nbsp;&nbsp;
+				12oz Water Bottle : &nbsp;&nbsp;<select name="bottle" id="bottle">
+                <option value="Select">Select Color</option>
+                <option value="Black">Black</option>
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Pink">Pink</option>
+                <option value="Red">Red</option>
+				</select>						
+				</p>
+			</div>	
+	
+            <div><!--Reference: https://edco.global/eventterms/ GW 05/10/2020-->
+                <h3 style="color:darkorange">Terms and Conditions</h3>
+                <p style "text-align:left">
+                    Consent to the Use of Photographic Images: <br><br>
+                    Registrations and attendance at, or 
+                    participation in Center City Cycling Club (CCCC) events constitutes an agreement 
+                    by the registrant to CCCC’s use and distribution (both now and in the future) 
+                    of the registrant or attendee’s image or voice in photographs, videotapes, 
+                    electronic reproductions and audiotapes.<br><br>
+                    Liability Waiver & Release <br><br>
+                    In consideration of being allowed to register for, and participate in, the events 
+                    I hereby warrant and represent that I am age 18 or above and freely waive, release 
+                    from liability, assume all risks, and covenant not to sue Center City Cycling Club 
+                    (CCCC) or its members, employees, board members, agents, or volunteers for any expense,
+                    loss, damage, personal injury, including loss of life, disability, property damage, 
+                    or property theft or actions of any kind that I may hereafter suffer or sustain before 
+                    during or after the Event unless said expense, loss, damage, personal injury, including 
+                    loss of life, disability, property damage or property theft or actions of any kind is 
+                    caused by the sole, gross negligence of CCCC. This Waiver and Releases is specifically 
+                    binding upon my heirs and assigns and is knowingly given. <br><br>
+                <input name="agree" id="agree" type="checkbox" value="Agree">By checking this box I agree to the above terms and conditions<br>
+                </p>
+            </div>
+        </form>
+
+        <form>
+            <!--Changed the type of the button to submit GW 05/10/2020-->
+            <input type="submit" value="Submit" onclick="javascript:values();"/>
+            <!--Changed the type of the button to reset GW 05/10/2020-->
+            <!--Renamed function to resetForm; reset() is taken as a built-in function in JavaScript GW 05/10/2020-->
+            <input type="reset" onclick="javascript:resetForm()"/>
+        </form>
+
+    <script type="text/javascript">
+
+                // This function resets the form fields, depending on the number of clicks GW 05/09/2020
+                reset_count = 0
+
+                function resetForm() {
+                    if (reset_count == 0 ) {
+                        reset_count += 1
+                        document.getElementById("event_form").reset();
+                    } else if (reset_count == 1) {
+                        reset_count += 1
+                        document.getElementById("registration_form").reset();
+                        reset_count = 0
+                    }
+                }
+			
+                function printOrder(who,first,last,email,gender,dob,phone,address,city,states,country,zipcode,notify,shirt,bottle)
+                    {
+                        var new_window;
+                        new_window=window.open("","","status=0,height=500,width=500")
+                        new_window.focus();
+                        new_window.document.write(
+									"<h1>Tour the Shore Event Registration Receipt</h1>" + "<br>", 
+									"Who: "+ who + "<br>", 
+                                    "First Name: " + first + "<br>", 
+                                    "Last Name: " + last + "<br>",
+                                    "Email Address: "+ email + "<br>",
+                                    "Gender: "+ gender + "<br>",
+                                    "Date of Birth: "+ dob + "<br>",
+                                    "Phone Number: "+ phone + "<br>",
+                                    "Street Address: "+ address + "<br>",
+                                    "City: "+ city + "<br>",
+                                    "State: "+ states + "<br>",
+                                    "Country: "+ country + "<br>",
+                                    "Zipcode: "+ zipcode + "<br>",
+									"Would you like email notifications about our future events?: "+ notify + "<br>",
+									"Free Performance Shirt Size: "+ shirt + "<br>",
+									"Free 12oz Water Bottle Color: "+ bottle + "<br>"									
+									);
+                        new_window.close;
+                    }
+
+                function values()
+
+				{
+                    /*Validate Who You are registering?*/					
+					if (((document.getElementById("who0").checked) == false) && ((document.getElementById("who1").checked) == false) && 
+                                ((document.getElementById("who2").checked) == false)){
+                                    alert("Please Choose Who You Are Registering");
+                                    return;							
+					} else {
+                                /*Values of registration*/
+                               if ((document.getElementById("who2").checked) == true) {
+                                    var who = "Minor";
+                                }
+                                else if ((document.getElementById("who1").checked) == true) {
+                                    var who = "Other Adult";
+                                }
+                                else if ((document.getElementById("who0").checked) == true) {
+                                    var who = "Me";
+
+								}
+							}
+
+                        /*Validate Customer First Name*/
+                        FirstName = document.getElementById("first").value
+                        if (FirstName == ""){ 
+                            alert("Please Enter First Name");
+                            return;
+                        } else {
+                            var first = registration.first.value;
+                            
+                        }	
+
+                        /*Validate Customer Last Name*/
+                        LastName = document.getElementById("last").value
+                        if (LastName == ""){ 
+                            alert("Please Enter Last Name");
+                            return;
+                        } else {
+                            var last = registration.last.value;
+                            
+                        }	
+						
+                        /*Validate Customer Email*/
+                        emailaddress = document.getElementById("email").value
+                        if (emailaddress == ""){ 
+                            alert("Please Enter Email");
+                            return;
+                        } else {
+                            var email = registration.email.value;
+                            
+                        }
+						
+						/*Validate Customer Confirm Email*/
+                        confirmemail = document.getElementById("confirm").value
+                        if (confirmemail == ""){ 
+                            alert("Please Confirm Email");
+                            return;
+                        } else {
+                            var confirm = registration.confirm.value;
+                            
+                        }
+
+						/*Validate Customer Gender*/
+						if (((document.getElementById("gender0").checked) == false) && ((document.getElementById("gender1").checked) == false)){
+                                    alert("Please Select Gender");
+                                    return;							
+						} else {
+                                /*Values of gender*/
+                               if ((document.getElementById("gender1").checked) == true) {
+                                    var gender = "Female";
+                                }
+                                else if ((document.getElementById("gender0").checked) == true) {
+                                    var gender = "Male";
+                                }
+							}
+
+                        /*Validate Customer DOB*/
+                        DateOfBirth = document.getElementById("dob").value
+                        if (DateOfBirth == "") { 
+                            alert("Please Enter Date Of Birth");
+                            return;
+                        } else {
+                            var dob = registration.dob.value;
+                        }
+
+                        /*Validate Customer Phone*/
+                        PhoneNumber = document.getElementById("phone").value
+                        if (PhoneNumber == "") { 
+                            alert("Please Enter Phone Number");
+                            return;
+                        } else {
+                            var phone = registration.phone.value;
+                        }
+
+                        /*Validate Customer Address*/
+                        StreetAddress = document.getElementById("address").value
+                        if (StreetAddress == "") { 
+                            alert("Please Enter Street Address");
+                            return;
+                        } else {
+                            var address = registration.address.value;
+                        }
+
+                        /*Validate Customer City*/
+                        City = document.getElementById("city").value
+                        if (City == "") { 
+                            alert("Please Enter City");
+                            return;
+                        } else {
+                            var city = registration.city.value;
+                        }
+
+                        // Validate the customer state GW 05/10/2020
+                        var selectedState = document.getElementById ("states");
+                        var state = selectedState.options[selectedState.selectedIndex].text;
+                        if (state == "Select") {
+                            alert("Please choose a state.");
+                            return;
+                        } else {
+                            state = state
+                        }
+						
+                        /*Validate Customer Country*/
+                        Country = document.getElementById("country").value
+                        if (Country== "") { 
+                            alert("Please Enter Country");
+                            return;
+                        } else {
+                            var country = registration.country.value;
+                        }
+
+                        /*Validate Customer Zipcode*/
+                        Zipcode = document.getElementById("zipcode").value
+                        if (Zipcode== "") { 
+                            alert("Please Enter Zipcode");
+                            return;
+                        } else {
+                            var zipcode = registration.zipcode.value;
+                        }
+
+						/*Validate Customer email notification*/
+						if (((document.getElementById("notify0").checked) == false) && ((document.getElementById("notify1").checked) == false)){
+                                    alert("Please Select: Would you like email notifications about our future events?");
+                                    return;							
+						} else {
+                                /*Values of notify*/
+                               if ((document.getElementById("notify1").checked) == true) {
+                                    var notify = "No";
+                                }
+                                else if ((document.getElementById("notify0").checked) == true) {
+                                    var notify = "Yes";
+                                }
+							}
+
+						/*Validate free items JW 5/11/2020*/
+                        var selectedShirt = document.getElementById ("shirt");
+                        var shirt = selectedShirt.options[selectedShirt.selectedIndex].text;
+                        if (shirt == "Select Size") {
+                            alert("Please choose a performance shirt size.");
+                            return;
+                        } else {
+                            shirt = shirt
+                        }
+
+                        var selectedBottle = document.getElementById ("bottle");
+                        var bottle = selectedBottle.options[selectedBottle.selectedIndex].text;
+                        if (bottle == "Select Color") {
+                            alert("Please choose a color for 12oz water bottle.");
+                            return;
+                        } else {
+                            bottle = bottle
+                        }
+						
+
+                        // Validate Terms and Conditions GW 05/10/2020
+                        if ((document.getElementById("agree").checked) == false) {
+                            alert("Please agree to the terms and conditions");
+                            return;
+                        } else {
+                            var agree = "Yes"
+                        }
+
+                        printOrder(who,first,last,email,gender,dob,phone,address,
+											city,state,country,zipcode,notify,shirt,bottle);
+
+                    }			
+        </script>
+    </body>
+</html>
