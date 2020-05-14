@@ -1,0 +1,252 @@
+/*
+==================================================
+Project Name: Weeks 5 & 6 - Assignment 6 - Team 17
+Project Description: CSS Style Page
+DUE DATE: 05/13/2020 23:59:59
+LAST EDIT (DATE/TIME): 05/11/2020 13:16:30 EST GW
+Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
+==================================================
+*/
+
+/* Homepage Background Color, GW 04/18/2020
+ Reference: https://www.w3schools.com/tags/tag_body.asp
+ Reference for Colors: https://htmlcolorcodes.com/*/
+body {
+    background-color:white;             
+}
+
+/* Added Header/Banner Image as Style GW 05/08/2020
+Reference: https://www.w3schools.com/cssref/pr_background-image.asp
+Reference: https://unsplash.com/@maicoamorim?utm_source=trello&utm_medium=referral&utm_campaign=api-credit*/
+.imageContainerOne {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width:1440px;
+    height:215px;
+    margin-bottom: 0em;
+    margin-top: 0em;
+    background-image: url("pic9.jpg");
+}
+
+
+/* Added Font Style for the Header/Banner 05/08/2020
+    Reference: https://www.w3schools.com/w3css/w3css_fonts.asp */
+.monotonOne {
+    font-family: 'Monoton';
+    font-size:60px;
+    color:darkorange;
+    text-align:center;
+    margin-top: 1.35em;
+}
+
+/* Product Page Column GW 05/08/2020 */
+.columnA {
+    float: left;
+    width: 50%;
+}
+
+/* GW 05/08/2020 */
+.columnOne {
+    float: left;
+    width: 45%;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+/* GW 05/08/2020 */
+.columnTwo {
+    float: right;
+    width: 45%;
+    margin-right: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+/* Clear floats after the columns 05/08/2020*/
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* GW 05/08/2020 */
+.marginauto {
+    margin: 10px auto 5px;
+    display: block;
+}
+
+
+/*GW 05/08/2020*/
+.imageContainerTwo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width:1440px;
+    height:60px;
+    margin-bottom: 0em;
+    margin-top: 0em;
+    background-image: url("pic9.jpg");
+}
+
+/*GW 05/08/2020*/
+.monotonTwo {
+    font-family: 'Monoton';
+    font-size:60px;
+    color:darkorange;
+    text-align:left;
+    margin-top: 0em;
+}
+
+/*GW 05/08/2020*/
+/* image gallery 
+    <!--Reference: https://www.w3schools.com
+    /css/css_image_gallery.asp-->
+*/
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 100px;
+}
+  
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+.row:after {/* Clear floats after the columns */
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*Product Page and Registration Page Buttons GW 05/08/2020*/
+.buttonOne {
+    border-radius: 8px;
+    background-color: orange;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buttonTwo {
+    border-radius: 8px;
+    background-color:ghostwhite; /* Green */
+    border: 2px solid orange; /* Green */;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buttonTwo:hover {
+    opacity: 1;
+    background-color:orange;
+    border: 2px solid black;
+}
+
+.buttonOne:hover {
+    opacity: 0.6;
+    background-color:ghostwhite;
+    border: 2px solid orange;
+}
+    
+
+/*Email Column GW 05/08/2020*/
+.column_two {
+    float: left;
+    width: 33%;
+    position: absolute;
+    top: 0px;
+    left: 5em;
+    right: 0px;
+    width:33%;
+    height:215px;
+    margin-bottom: -5em;
+    margin-top: 93em;
+}
+
+/*Email Links GW 05/08/2020*/
+p.first {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+/*Logo Column GW 05/08/2020*/
+.column_three { 
+    float: center;
+    width: 33%;
+    position: absolute;
+    top: 0px;
+    left: 20.5em;
+    right: 0px;
+    width:33%;
+    height:215px;
+    margin-bottom: 5em;
+    margin-top: 91em;
+}
+
+/* Clear floats after the columns */
+.row_three:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Facebook Column GW 05/08/2020*/
+.column_four {
+    float: right;
+    text-align: center;
+    width: 33%;
+    position: absolute;
+    top: 0px;
+    left: 50em;
+    right: 0em;
+    width:33%;
+    height:215px;
+    margin-bottom: 0em;
+    margin-top: 93em;
+}
+
+/* Clear floats after the columns */
+.row_two:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.columnB {
+    float: left;
+    width: 50%; 
+}
+
+/* Clear floats after the columns */
+.rowB:after {
+    content: "";
+    display: table;
+    clear: both; 
+}
