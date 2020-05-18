@@ -3,8 +3,8 @@
 ========================================================
 Project Name: Week 5 - Assignment 6 Part A/B -
 Project Description: Order page for Independence Shorts
-DUE DATE: 05/12/2020 23:59:59
-LAST EDIT (DATE/TIME): 05/09/2020 01:17:15 EST GW
+DUE DATE: 05/13/2020 23:59:59
+LAST EDIT (DATE/TIME): 05/12/2020 01:17:15 EST GW
 Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 ========================================================
 -->
@@ -29,16 +29,15 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 
 <html lang="en">
 
-    <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
-            <div class="imageContainerTwo"></div>
-
     <head>
-        <meta charset = "utf-8">
-        <link rel="icon" href="CCCC-C.png">
+        <title>Customization</title>
+        <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
+        <meta charset="utf-8"/>
+        <link rel="icon" href="CCCC-C.png"/>
     </head>
 
-    <body>
-    
+    <body>        
+        <div class="imageContainerTwo"></div>
         <!--ORDER INFORMATION-->
         <form name= "order_information_form" id="order_form"> 
             <div class="columnOne" style="background-color:#f2f2f2;margin-top:5em">
@@ -134,10 +133,60 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             City: &nbsp;&nbsp;</p>
                                 <input name="customer_city"size="40" id="city" type="text" style="margin-left:10px"></input><br>
         
-                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
-                            State: &nbsp;&nbsp;</p>
-                                <input name="customer_state"size="40" id="state" type="text" style="margin-left:10px"></input><br>
-        
+                        <p style="font-family:'Arial';font-size:12px;margin-left:10px">State: &nbsp;&nbsp;</p>
+                            <select name="customer_state"id="state" style="margin-left:10px">
+                                <option value="Select">Select</option>
+                                <option value="AL">AL - Alabama</option>
+                                <option value="AK">AK - Alaska</option>
+                                <option value="AR">AR - Arkansas</option>
+                                <option value="CA">CA - California</option>
+                                <option value="CO">CO - Colorado</option>
+                                <option value="CT">CT - Connecticut</option>
+                                <option value="DE">DE - Delaware</option>
+                                <option value="FL">FL - Florida</option>
+                                <option value="GA">GA - Georgia</option>
+                                <option value="HI">HI - Hawaii</option>
+                                <option value="ID">ID - Idaho</option>
+                                <option value="IL">IL - Illinois</option>
+                                <option value="IN">IN - Indiana</option>
+                                <option value="IA">IA - Iowa</option>
+                                <option value="KS">KS - Kansas</option>
+                                <option value="KY">KY - Kentucky</option>
+                                <option value="LA">LA - Louisiana</option>
+                                <option value="ME">ME - Maine</option>
+                                <option value="MD">MD - Maryland</option>
+                                <option value="MA">MA - Massachusetts</option>
+                                <option value="MI">MI - Michigan</option>
+                                <option value="MN">MN - Minnesota</option>
+                                <option value="MS">MS - Mississippi</option>
+                                <option value="MO">MO - Missouri</option>
+                                <option value="MT">MT - Montana</option>
+                                <option value="NE">NE - Nebraska</option>
+                                <option value="NV">NV - Nevada</option>
+                                <option value="NH">NH - New Hampshire</option>
+                                <option value="NJ">NJ - New Jersey</option>
+                                <option value="NM">NM - New Mexico</option>
+                                <option value="NY">NY - New York</option>
+                                <option value="NC">NC - North Carolina</option>
+                                <option value="ND">ND - North Dakota</option>
+                                <option value="OH">OH - Ohio</option>
+                                <option value="OK">OK - Oklahoma</option>
+                                <option value="OR">OR - Oregon</option>
+                                <option value="PA">PA - Pennsylvania</option>
+                                <option value="RI">RI - Rhode Island</option>
+                                <option value="SC">SC - South Carolina</option>
+                                <option value="SD">SD - South Dakota</option>
+                                <option value="TN">TN - Tennessee</option>
+                                <option value="TX">TX - Texas</option>
+                                <option value="UT">UT - Utah</option>
+                                <option value="VT">VT - Vermont</option>
+                                <option value="VA">VA - Virginia</option>
+                                <option value="WA">WA - Washington</option>
+                                <option value="WV">WV - West Virginia</option>
+                                <option value="WI">WI - Wisconsin</option>
+                                <option value="WY">WY - Wyoming</option>
+                            </select>
+                            
                         <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
                             Zip Code: &nbsp;&nbsp;</p>
                                 <input name="customer_zip"size="40" id="zip" type="text" style="margin-left:10px"></input><br>
@@ -174,7 +223,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                 /*This function creates a new window to print the customer's shipping information.
                 This function uses the getShippingValues helper function to pull values from the 
                 shipping_form. GW 05/09/2020*/
-s
+
                 function printOrder(customer_name, customer_email, customer_phone, customer_city, customer_state, customer_zip, 
                                     delivery_instructions, address, embroidery_text, emb_loc, size, color)
                     {
@@ -357,13 +406,14 @@ s
                             var customer_city = shipping_form.customer_city.value;
                         }
 
-                        // Validate Customer State GW 05/09/2020
-                        customer_state = document.getElementById("state").value
-                        if (customer_state == "") { 
-                            alert("Please Enter State");
+                        // Validate the customer state GW 05/10/2020
+                        var selectedState = document.getElementById ("state");
+                        var state = selectedState.options[selectedState.selectedIndex].text;
+                        if (state == "Select") {
+                            alert("Please choose a state.");
                             return;
                         } else {
-                            var customer_state = shipping_form.customer_state.value;
+                            state = state
                         }
                         
                         // Validate Customer Zip Code GW 05/09/2020
@@ -385,7 +435,7 @@ s
 
                         // Print order confirmation form GW 05/09/2020
                         printOrder(customer_name, customer_email, customer_phone, 
-                                    customer_city, customer_state, customer_zip, 
+                                    customer_city, state, customer_zip, 
                                     delivery_instructions, address, embroidery_text, 
                                     emb_loc, size, color);
                     }
