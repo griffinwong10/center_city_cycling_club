@@ -1,15 +1,21 @@
 <!DOCTYPE HTML>
+
 <!--
-=======================================================
-Project Name: Week 5/6 - Assignment 6 Part A/B -
-Project Description: Order page for Independence Jersey  
-DUE DATE: 05/12/2020 23:59:59
-LAST EDIT (DATE/TIME): 05/09/2020 01:17:15 EST GW
+=====================================================================================
+Project Name: Week 8 | Assignment 7 | Team 17
+
+Project Description: Order page for Independence Jersey ; Addition of iFrame pricing 
+tables on registration pages and order pages; Phone number validation on order page 
+forms; Email validation on order page forms
+
+DUE DATE: 06/03/2020 23:59:59
+
+LAST EDIT (DATE/TIME): 05/27/2020 20:07:21 EST GW
+
 Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
-=======================================================
+======================================================================================
 -->
 
-<!--Order Information Form GW 05/06/2020 00:17:43 PST-->
 
 <!--HTML/CSS-->
 <!--Reference: https://www.w3schools.com/tags/tag_input.asp-->
@@ -20,6 +26,8 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 <!--Reference https://www.tutorialspoint.com/How-to-clear-all-the-input-in-HTML-forms-->
 
 <!--JavaScript-->
+
+<!--Assignment Six-->
 <!--Reference: https://www.w3schools.com/jsref/jsref_return.asp-->
 <!--Reference: https://www.w3schools.com/js/js_comparisons.asp-->
 <!--Reference: https://www.w3schools.com/jsref/prop_checkbox_checked.asp-->
@@ -30,17 +38,22 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 <!--Reference: https://www.w3schools.com/jsref/event_ondblclick.asp-->
 <!--Reference: https://www.w3schools.com/html/html_entities.asp-->
 
+<!--Assignment Seven-->
+<!--Reference: https://www.w3schools.com/jsref/jsref_charat.asp-->
+<!--Reference: https://www.w3schools.com/js/js_loop_for.asp-->
+<!--Reference: https://www.w3schools.com/jsref/jsref_length_string.asp-->
+<!--Reference: https://www.w3schools.com/jsref/jsref_indexof.asp-->
+
 <html lang="en">
-
-    <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
-            <div class="imageContainerTwo"></div>
-
     <head>
-        <meta charset = "utf-8">
-        <link rel="icon" href="images/CCCC-C.png">
+        <title>Customization</title>
+        <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
+        <meta charset="utf-8"/>
+        <link rel="icon" href="CCCC-C.png"/>
     </head>
 
     <body>
+        <div class="imageContainerTwo"></div>
         <!--ORDER INFORMATION-->
         <form name= "order_information_form" id="order_form"> 
             <div class="columnOne" style="background-color:#f2f2f2;margin-top:5em">
@@ -76,26 +89,22 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                         <br>
                         <row class="row">
                             <p style="font-family:'Arial';font-size:12px" class="first">
-                                <b>Jersey Size:</b> &nbsp;&nbsp;
-                                <br>
+                                <b>Jersey Size:</b> &nbsp;&nbsp;<br>
                                 <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size0" name="size"> Extra Small &nbsp;&nbsp;
                                 <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size1" name="size"> Small &nbsp;&nbsp;
                                 <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size2" name="size" > Medium &nbsp;&nbsp;
                                 <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size3" name="size"> Large &nbsp;&nbsp;
                                 <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size4" name="size"> Extra Large &nbsp;&nbsp;</p> 
-                        </row>
-                        <br>
+                        </row><br>
                         <row class="row">
                             <p style="font-family:'Arial';font-size:12px;" class="first">
-                                <b>Pockets:</b> &nbsp;&nbsp;
-                                <br>
+                                <b>Pockets:</b> &nbsp;&nbsp;<br>
                                 <input name="pocket" type="radio" id="pocket0" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 4 Pocket &nbsp;&nbsp;&nbsp
                                 <input name="pocket" type="radio" id="pocket1" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 3 Pockets &nbsp;&nbsp;&nbsp
                                 <input name="pocket" type="radio" id="pocket2" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 2 Pockets &nbsp;&nbsp;&nbsp
                                 <input name="pocket" type="radio" id="pocket3" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 1 Pocket &nbsp;&nbsp;&nbsp
                                 <input name="pocket" type="radio" id="pocket4" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> No Pockets &nbsp;&nbsp;&nbsp</p> 
-                        </row>
-                        <br>
+                        </row><br>
                         <row class="row">
                             <p style="font-family:'Arial';font-size:12px" class="first">
                                 <b>Embroidery Location:</b> &nbsp;&nbsp;
@@ -111,14 +120,12 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
                                 <b>Embroidery Text: &nbsp;&nbsp;</b></p>
                                     <input name="embroidery_text" id="emb_text" size="100" height="100px"type="text" style="margin-left:10px;height:100px"></input><br>
-                        </row>
-                        <br>
-                        <br> 
+                        </row><br><br> 
                     </div>
                 </div>
             </form>
         
-    <!--SHIPPING INFORMATION-->
+    <!--SHIPPING INFORMATION GW 05/27/2020-->
     <form name= "shipping_form" id="shipping_form"> 
             <div class="columnTwo" style="background-color:#f2f2f2;margin-top:5em">
                 <br>
@@ -147,9 +154,58 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             City: &nbsp;&nbsp;</p>
                                 <input name="customer_city"size="40" id="city" type="text" style="margin-left:10px"></input><br>
         
-                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
-                            State: &nbsp;&nbsp;</p>
-                                <input name="customer_state"size="40" id="state" type="text" style="margin-left:10px"></input><br>
+                        <p style="font-family:'Arial';font-size:12px;margin-left:10px">State: &nbsp;&nbsp;</p><select name="customer_state"id="state" style="margin-left:10px">
+                            <option value="Select">Select</option>
+                            <option value="AL">AL - Alabama</option>
+                            <option value="AK">AK - Alaska</option>
+                            <option value="AR">AR - Arkansas</option>
+                            <option value="CA">CA - California</option>
+                            <option value="CO">CO - Colorado</option>
+                            <option value="CT">CT - Connecticut</option>
+                            <option value="DE">DE - Delaware</option>
+                            <option value="FL">FL - Florida</option>
+                            <option value="GA">GA - Georgia</option>
+                            <option value="HI">HI - Hawaii</option>
+                            <option value="ID">ID - Idaho</option>
+                            <option value="IL">IL - Illinois</option>
+                            <option value="IN">IN - Indiana</option>
+                            <option value="IA">IA - Iowa</option>
+                            <option value="KS">KS - Kansas</option>
+                            <option value="KY">KY - Kentucky</option>
+                            <option value="LA">LA - Louisiana</option>
+                            <option value="ME">ME - Maine</option>
+                            <option value="MD">MD - Maryland</option>
+                            <option value="MA">MA - Massachusetts</option>
+                            <option value="MI">MI - Michigan</option>
+                            <option value="MN">MN - Minnesota</option>
+                            <option value="MS">MS - Mississippi</option>
+                            <option value="MO">MO - Missouri</option>
+                            <option value="MT">MT - Montana</option>
+                            <option value="NE">NE - Nebraska</option>
+                            <option value="NV">NV - Nevada</option>
+                            <option value="NH">NH - New Hampshire</option>
+                            <option value="NJ">NJ - New Jersey</option>
+                            <option value="NM">NM - New Mexico</option>
+                            <option value="NY">NY - New York</option>
+                            <option value="NC">NC - North Carolina</option>
+                            <option value="ND">ND - North Dakota</option>
+                            <option value="OH">OH - Ohio</option>
+                            <option value="OK">OK - Oklahoma</option>
+                            <option value="OR">OR - Oregon</option>
+                            <option value="PA">PA - Pennsylvania</option>
+                            <option value="RI">RI - Rhode Island</option>
+                            <option value="SC">SC - South Carolina</option>
+                            <option value="SD">SD - South Dakota</option>
+                            <option value="TN">TN - Tennessee</option>
+                            <option value="TX">TX - Texas</option>
+                            <option value="UT">UT - Utah</option>
+                            <option value="VT">VT - Vermont</option>
+                            <option value="VA">VA - Virginia</option>
+                            <option value="WA">WA - Washington</option>
+                            <option value="WV">WV - West Virginia</option>
+                            <option value="WI">WI - Wisconsin</option>
+                            <option value="WY">WY - Wyoming</option>
+                        </select>
         
                         <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
                             Zip Code: &nbsp;&nbsp;</p>
@@ -163,10 +219,19 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                     </div>
                 </form> 
             <form>
-                <input type="submit" style="margin-left:69.5em;margin-top:-20emm" value="Place Order " onclick="javascript:getValues();">
-                <input type="reset" style="margin-left:69.5em;margin-top:-20em" onclick="javascript:resetForm()"/> 
+                <row>
+                    <column>
+                        <input type="submit" style="margin-left:70.5em;margin-top:-20emm" value="Place Order " onclick="javascript:getValues();">
+                    </column>
+                    <column>
+                        <input type="reset" style="margin-left:0.5em;margin-top:-25em" onclick="javascript:resetForm()"/> 
+                    </column>
+                </row>
             </form>
             
+            <iframe src="size_chart.html" style="margin-left:50px;margin-bottom:100px;margin-top:50px" height="300" width="600"></iframe>
+            <iframe src="independence_jersey_prices.html" style="margin-left:110px;margin-top:50px;margin-bottom:100px" height="300" width="600"></iframe>
+
             <script type="text/javascript">
 
                 // This function resets the form fields, depending on the number of clicks GW 05/09/2020
@@ -347,13 +412,11 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                                 alert("Please Enter address");
                                 return;
                             } else {
-                                alert("Test");
                                 var address = (shipping_form.customer_address_two.value);
                             }
 
                         } else {
                             var address = (shipping_form.customer_address_one.value) + " " + (shipping_form.customer_address_two.value);
-                            
                         }
 
                         // Validate Customer Name GW 05/09/2020
@@ -363,28 +426,163 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             return;
                         } else {
                             var customer_name = shipping_form.customer_name.value;
-                            
                         }
 
-                        // Validate Customer Email GW 05/09/2020
-                        customer_email = document.getElementById("email").value
-                        if (customer_email == "") { 
+                        // Validate Customer Email GW 05/28/2020
+                        //https://www.w3schools.com/jsref/jsref_includes.asp
+                        // https://www.javascripttutorial.net/es6/javascript-string-includes/
+                        cust_email = document.getElementById("email").value
+
+                        if (cust_email == "") {
                             alert("Please Enter Email");
                             return;
+
                         } else {
-                            var customer_email = shipping_form.customer_email.value;
+
+                            // Variable declarations to be used below
+                            var string_customer_email = cust_email.toString();
+                            var at_included = string_customer_email.includes('@');
+                            var period_included = string_customer_email.includes('.');
+                            var last_index = (string_customer_email.length-1)
+                            var fourth_last_index = (string_customer_email.length-4)
+                            var third_last_index = (string_customer_email.length-3)
+
+                            // Check if @ sign and . are included in email
+                            if ((at_included == true) && (period_included == true)) {
+
+                                // Check if @ sign is first or last character
+                                if (((string_customer_email.charAt(0)) != '@') &&
+                                ((string_customer_email.charAt((last_index))) != '@')) {
+
+                                    // Check if period is the third or fourth to last character
+                                    if (((string_customer_email.charAt(fourth_last_index)) == '.') || 
+                                        ((string_customer_email.charAt(third_last_index)) == '.')) {
+
+                                            // Email is valid; pass to window function
+                                            var customer_email = shipping_form.customer_email.value;
+
+                                        } else {
+                                            alert("Please Enter a Valid Email; period is not in fourth or third positions");
+                                            return;
+                                        }
+
+                                } else {
+                                    alert("Please Enter a Valid Email; @ character is incorrectly first or last ");
+                                    return;
+                                }
+                            } else {
+
+                                alert("Please Enter a Valid Email; missing period and at symbol");
+                                return;
+                            } 
                         }
 
                         // Validate Customer Phone GW 05/09/2020
-                        customer_phone = document.getElementById("phone").value
+
+                        // Accepted Formats:
+                            // (###)###-####
+                            // ###-###-####
+                            // (###)#######
+                            // ##########
+
+                        var customer_phone = document.getElementById("phone").value
+                        var integers = ["0","1","2","3","4","5","6","7","8","9"];
                         if (customer_phone == "") { 
                             alert("Please Enter Phone Number");
                             return;
                         } else {
-                            var customer_phone = shipping_form.customer_phone.value;
+
+                            var string_customer_phone = customer_phone.toString()
+
+                            // Check if phone number is in format: (###)###-####
+
+                            if (customer_phone.length == 13) {
+                                if (((customer_phone.charAt(0)) == "(") &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) in integers) &&
+                                ((string_customer_phone.charAt(4)) == ")") &&
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) in integers) && 
+                                ((string_customer_phone.charAt(8)) == "-") &&
+                                ((string_customer_phone.charAt(9)) in integers) &&
+                                ((string_customer_phone.charAt(10)) in integers) &&
+                                ((string_customer_phone.charAt(11)) in integers) &&
+                                ((string_customer_phone.charAt(12)) in integers)){
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                            } else {
+                                alert("Incorrect phone number format; please try again.");
+                                return;
+                            }
+
+                            //  Check if phone number is in format: ###-###-####
+
+                            } else if (customer_phone.length == 12) {
+                                if (((customer_phone.charAt(0)) in integers) &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) == "-") &&
+                                ((string_customer_phone.charAt(4)) in integers) && 
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) == "-") &&
+                                ((string_customer_phone.charAt(8)) in integers) &&
+                                ((string_customer_phone.charAt(9)) in integers) &&
+                                ((string_customer_phone.charAt(10)) in integers) &&
+                                ((string_customer_phone.charAt(11)) in integers)) {
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                             //  Check if phone number is in format: (###)#######
+
+                            }  else if (((customer_phone.charAt(0)) == "(") &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) in integers) &&
+                                ((string_customer_phone.charAt(4)) == ")") &&
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) in integers) &&
+                                ((string_customer_phone.charAt(8)) in integers) &&
+                                ((string_customer_phone.charAt(9)) in integers) &&
+                                ((string_customer_phone.charAt(10)) in integers) &&
+                                ((string_customer_phone.charAt(11)) in integers)) {
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                            }  else {
+                                    alert("Incorrect phone number format; please try again.")
+                                    return;
+                            }
+
+                            //  Check if phone number is in format: ##########
+
+                            } else  if (customer_phone.length == 10) {
+                                if (((customer_phone.charAt(0)) in integers) &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) in integers) &&
+                                ((string_customer_phone.charAt(4)) in integers) &&
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) in integers) &&
+                                ((string_customer_phone.charAt(8)) in integers) &&
+                                ((string_customer_phone.charAt(9)) in integers)) {
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                                }
+                            } else {
+                                alert("Incorrect phone number format; please try again.")
+                                return;
+                            }
                         }
 
                         // Validate Customer City GW 05/09/2020
+
                         customer_city = document.getElementById("city").value
                         if (customer_city == "") { 
                             alert("Please Enter City");
@@ -393,13 +591,14 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             var customer_city = shipping_form.customer_city.value;
                         }
 
-                        // Validate Customer State GW 05/09/2020
-                        customer_state = document.getElementById("state").value
-                        if (customer_state == "") { 
-                            alert("Please Enter State");
+                        // Validate the customer state GW 05/10/2020
+                        var selectedState = document.getElementById ("state");
+                        var state = selectedState.options[selectedState.selectedIndex].text;
+                        if (state == "Select") {
+                            alert("Please choose a state.");
                             return;
                         } else {
-                            var customer_state = shipping_form.customer_state.value;
+                            state = state
                         }
                         
                         // Validate Customer Zip Code GW 05/09/2020
@@ -422,7 +621,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 
                         // Print the order confirmation form GW 05/09/2020
                         printOrder(customer_name, customer_email, customer_phone, 
-                                    customer_city, customer_state, customer_zip, 
+                                    customer_city, state, customer_zip, 
                                     delivery_instructions, address, embroidery_text, 
                                     emb_loc, pocket, size, color);
                     }
