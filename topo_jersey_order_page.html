@@ -1,12 +1,19 @@
 <!DOCTYPE HTML>
+
 <!--
-===================================================
-Project Name: Week 5/6 - Assignment 6 Part A/B -
-Project Description: Order page for products  
-DUE DATE: 05/13/2020 23:59:59
-LAST EDIT (DATE/TIME): 05/11/2020 01:17:15 EST GW
+=====================================================================================
+Project Name: Week 8 | Assignment 7 | Team 17
+
+Project Description:  Order page for products; Addition of iFrame pricing 
+tables on registration pages and order pages; Phone number validation on order page 
+forms; Email validation on order page forms
+
+DUE DATE: 06/03/2020 23:59:59
+
+LAST EDIT (DATE/TIME): 05/27/2020 20:07:21 EST GW
+
 Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
-===================================================
+======================================================================================
 -->
 
 <!--Order Information Form GW 05/06/2020 00:17:43 PST-->
@@ -37,7 +44,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 
     <head>
         <meta charset = "utf-8">
-        <link rel="icon" href="images/CCCC-C.png">
+        <link rel="icon" href="CCCC-C.png">
     </head>
 
     <body>
@@ -217,6 +224,9 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                 <input type="reset" style="margin-left:69.5em;margin-top:-20em" onclick="javascript:resetForm()"/> 
             </form>
             
+            <iframe src="size_chart.html" style="margin-left:50px;margin-bottom:100px;margin-top:50px" height="300" width="600"></iframe>
+            <iframe src="topo_jersey_prices.html" style="margin-left:110px;margin-top:50px;margin-bottom:100px" height="300" width="600"></iframe>
+
             <script type="text/javascript">
 
                 // This function resets the form fields, depending on the number of clicks GW 05/10/2020
@@ -396,14 +406,54 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             var customer_name = shipping_form.customer_name.value;
                             
                         }
+                        
+                        // Validate Customer Email GW 05/28/2020
+                        //https://www.w3schools.com/jsref/jsref_includes.asp
+                        // https://www.javascripttutorial.net/es6/javascript-string-includes/
+                        cust_email = document.getElementById("email").value
 
-                        // Validate Customer Email GW 05/10/2020
-                        customer_email = document.getElementById("email").value
-                        if (customer_email == "") { 
+                        if (cust_email == "") {
                             alert("Please Enter Email");
                             return;
+
                         } else {
-                            var customer_email = shipping_form.customer_email.value;
+
+                            // Variable declarations to be used below
+                            var string_customer_email = cust_email.toString();
+                            var at_included = string_customer_email.includes('@');
+                            var period_included = string_customer_email.includes('.');
+                            var last_index = (string_customer_email.length-1)
+                            var fourth_last_index = (string_customer_email.length-4)
+                            var third_last_index = (string_customer_email.length-3)
+
+                            // Check if @ sign and . are included in email
+                            if ((at_included == true) && (period_included == true)) {
+
+                                // Check if @ sign is first or last character
+                                if (((string_customer_email.charAt(0)) != '@') &&
+                                ((string_customer_email.charAt((last_index))) != '@')) {
+
+                                    // Check if period is the third or fourth to last character
+                                    if (((string_customer_email.charAt(fourth_last_index)) == '.') || 
+                                        ((string_customer_email.charAt(third_last_index)) == '.')) {
+
+                                            // Email is valid; pass to window function
+                                            var customer_email = shipping_form.customer_email.value;
+
+                                        } else {
+                                            alert("Please Enter a Valid Email; period is not in fourth or third positions");
+                                            return;
+                                        }
+
+                                } else {
+                                    alert("Please Enter a Valid Email; @ character is incorrectly first or last ");
+                                    return;
+                                }
+                            } else {
+
+                                alert("Please Enter a Valid Email; missing period and at symbol");
+                                return;
+                            } 
                         }
 
                         // Validate Customer Address GW 05/10/2020
@@ -415,7 +465,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                                 alert("Please Enter address");
                                 return;
                             } else {
-                                alert("Test");
+                                
                                 var address = (shipping_form.customer_address_two.value);
                             }
 
@@ -424,13 +474,105 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             
                         }
 
-                        // Validate Customer Phone GW 05/10/2020
-                        customer_phone = document.getElementById("phone").value
+                        // Validate Customer Phone GW 05/09/2020
+
+                        // Accepted Formats:
+                            // (###)###-####
+                            // ###-###-####
+                            // (###)#######
+                            // ##########
+
+                            var customer_phone = document.getElementById("phone").value
+                        var integers = ["0","1","2","3","4","5","6","7","8","9"];
                         if (customer_phone == "") { 
                             alert("Please Enter Phone Number");
                             return;
                         } else {
-                            var customer_phone = shipping_form.customer_phone.value;
+
+                            var string_customer_phone = customer_phone.toString()
+                            alert(customer_phone);
+
+                            // Check if phone number is in format: (###)###-####
+                            if (customer_phone.length == 13) {
+                                if (((customer_phone.charAt(0)) == "(") &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) in integers) &&
+                                ((string_customer_phone.charAt(4)) == ")") &&
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) in integers) && 
+                                ((string_customer_phone.charAt(8)) == "-") &&
+                                ((string_customer_phone.charAt(9)) in integers) &&
+                                ((string_customer_phone.charAt(10)) in integers) &&
+                                ((string_customer_phone.charAt(11)) in integers) &&
+                                ((string_customer_phone.charAt(12)) in integers)){
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                            } else {
+                                alert("Incorrect phone number format; please try again.");
+                                return;
+                            }
+
+                            //  Check if phone number is in format: ###-###-####
+                            } else if (customer_phone.length == 12) {
+                                if (((customer_phone.charAt(0)) in integers) &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) == "-") &&
+                                ((string_customer_phone.charAt(4)) in integers) && 
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) == "-") &&
+                                ((string_customer_phone.charAt(8)) in integers) &&
+                                ((string_customer_phone.charAt(9)) in integers) &&
+                                ((string_customer_phone.charAt(10)) in integers) &&
+                                ((string_customer_phone.charAt(11)) in integers)) {
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                             //  Check if phone number is in format: (###)#######
+                            }  else if (((customer_phone.charAt(0)) == "(") &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) in integers) &&
+                                ((string_customer_phone.charAt(4)) == ")") &&
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) in integers) &&
+                                ((string_customer_phone.charAt(8)) in integers) &&
+                                ((string_customer_phone.charAt(9)) in integers) &&
+                                ((string_customer_phone.charAt(10)) in integers) &&
+                                ((string_customer_phone.charAt(11)) in integers)) {
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                            }  else {
+                                    alert("Incorrect phone number format; please try again.")
+                                    return;
+                            }
+
+                            //  Check if phone number is in format: ##########
+                            } else  if (customer_phone.length == 10) {
+                                if (((customer_phone.charAt(0)) in integers) &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) in integers) &&
+                                ((string_customer_phone.charAt(4)) in integers) &&
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) in integers) &&
+                                ((string_customer_phone.charAt(8)) in integers) &&
+                                ((string_customer_phone.charAt(9)) in integers)) {
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                                }
+                            } else {
+                                alert("Incorrect phone number format; please try again.")
+                                return;
+                            }
                         }
 
                         // Validate Customer City GW 05/10/2020
