@@ -1,0 +1,622 @@
+<!DOCTYPE HTML>
+
+<!--
+=====================================================================================
+Project Name: Week 8 | Assignment 7 | Team 17
+
+Project Description: Order page for Throwback Jersey; Addition of iFrame pricing 
+tables on registration pages and order pages; Phone number validation on order page 
+forms; Email validation on order page forms
+
+DUE DATE: 06/03/2020 23:59:59
+
+LAST EDIT (DATE/TIME): 05/27/2020 20:07:21 EST GW
+
+Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
+======================================================================================
+-->
+
+
+<!--HTML/CSS-->
+<!--Reference: https://www.w3schools.com/tags/tag_input.asp-->
+<!--Reference: https://www.w3schools.com/html/html_entities.asp-->
+<!--Reference: https://www.w3schools.com/tags/tag_form.asp-->
+<!--Reference: https://www.w3schools.com/tags/tag_button.asp-->
+<!--Reference: https://www.w3schools.com/cssref/pr_background-image.asp-->
+<!--Reference https://www.tutorialspoint.com/How-to-clear-all-the-input-in-HTML-forms-->
+
+<!--JavaScript-->
+<!--Reference: https://www.w3schools.com/jsref/jsref_return.asp-->
+<!--Reference: https://www.w3schools.com/js/js_comparisons.asp-->
+<!--Reference: https://www.w3schools.com/jsref/prop_checkbox_checked.asp-->
+<!--Reference: https://www.w3schools.com/js/js_if_else.asp-->
+<!--Reference: https://www.geeksforgeeks.org/else-statement-javascript/-->
+<!--Reference: http://www.tizag.com/htmlT/htmlreset.php-->
+<!--Reference: https://www.w3schools.com/jsref/met_form_reset.asp-->
+<!--Reference: https://www.w3schools.com/jsref/event_ondblclick.asp-->
+<!--Reference: https://www.w3schools.com/html/html_entities.asp-->
+
+<html lang="en">
+
+    <head>
+        <meta charset = "utf-8">
+        <link rel="icon" href="CCCC-C.png">
+        <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
+        <div class="imageContainerTwo"></div>
+    </head>
+
+    <body>
+        <!--ORDER INFORMATION-->
+        <form name= "order_information_form" id="order_form"> 
+            <div class="columnOne" style="background-color:#f2f2f2;margin-top:5em">
+                <div class="row">
+                    <title style="margin-top: 1000em ">Order Information</title>
+                    <br>
+                        <h2 style="font-family:'Arial'; margin-left:10px; margin-top:0em" class="first"> Order Information</h2>
+                            <p style="font-family:'Arial';font-size:12px" class="first">
+                                <b>Jersey Color: </b>&nbsp;&nbsp;
+                                <br>
+                                <input name="color" type="radio" id="color0" style="font-family:'Arial';margin-top:15px;font-size:16px;margin-left:10px" class="first"> White &nbsp;&nbsp;
+                                <input name="color" type="radio" id="color1" style="font-family:'Arial';margin-top:15px;font-size:16px;margin-left:50px" class="first"> Black &nbsp;&nbsp;
+                                <input name="color" type="radio" id="color2" style="font-family:'Arial';margin-top:15px;font-size:16px;margin-left:50px" class="first"> Grey &nbsp;&nbsp;</p> 
+                        <row class="row"> <!--Screenshot Image Size: 388,455 GW 05/06/2020-->
+                            <div class="gallery" style="margin-left: 10px">
+                                <a target="_blank" href="throw_wht.jpg">
+                                <img src="throw_wht.png" width="20" height="100">
+                                </a>
+                            </div>
+                            
+                            <div class="gallery">
+                                <a target="_blank" href="throw_blk.jpg">
+                                <img src="throw_blk.png" width="20" height="100">
+                                </a>
+                            </div>
+                            
+                            <div class="gallery">
+                                <a target="_blank" href="throw_grey.jpg">
+                                <img src="throw_grey.png" width="20" height="100">
+                                </a>
+                            </div>
+                        </row>
+                        <br>
+                        <row class="row">
+                            <p style="font-family:'Arial';font-size:12px" class="first">
+                                <b>Jersey Size:</b> &nbsp;&nbsp;
+                                <br>
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size0" name="size"> Extra Small &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size1" name="size"> Small &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size2" name="size" > Medium &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size3" name="size"> Large &nbsp;&nbsp;
+                                <input type="radio" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first" id="size4" name="size"> Extra Large &nbsp;&nbsp;</p> 
+                        </row>
+                        <br>
+                        <row class="row">
+                            <p style="font-family:'Arial';font-size:12px;" class="first">
+                                <b>Pockets:</b> &nbsp;&nbsp;
+                                <br>
+                                <input name="pocket" type="radio" id="pocket0" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 4 Pocket &nbsp;&nbsp;&nbsp
+                                <input name="pocket" type="radio" id="pocket1" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 3 Pockets &nbsp;&nbsp;&nbsp
+                                <input name="pocket" type="radio" id="pocket2" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 2 Pockets &nbsp;&nbsp;&nbsp
+                                <input name="pocket" type="radio" id="pocket3" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> 1 Pocket &nbsp;&nbsp;&nbsp
+                                <input name="pocket" type="radio" id="pocket4" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> No Pockets &nbsp;&nbsp;&nbsp</p> 
+                        </row>
+                        <br>
+                        <row class="row">
+                            <p style="font-family:'Arial';font-size:12px" class="first">
+                                <b>Embroidery Location:</b> &nbsp;&nbsp;
+                                <br>
+                                <input name="emb_loc" type="radio" id="emb_loc_0" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Right Chest &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_1" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Left Chest &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_2" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Upper Back &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_3" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> Lower Back &nbsp;&nbsp;
+                                <input name="emb_loc" type="radio" id="emb_loc_4" style="font-family:'Arial';margin-top:15px;font-size:16px;" class="first"> No Embroidery &nbsp;&nbsp;</p> 
+                        </row>
+                        <br>
+                        <row class="row">
+                            <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                                <b>Embroidery Text: &nbsp;&nbsp;</b></p>
+                                    <input name="embroidery_text" id="emb_text" size="100" height="100px"type="text" style="margin-left:10px;height:100px"></input><br>
+                        </row>
+                        <br>
+                        <br> 
+                    </div>
+                </div>
+            </form>
+        
+    <!--SHIPPING INFORMATION-->
+    <form name= "shipping_form" id="shipping_form"> 
+            <div class="columnTwo" style="background-color:#f2f2f2;margin-top:5em">
+                <br>
+                    <h2 style="font-family:'Arial'; margin-left:10px; margin-top:0em" class="first"> Shipping Information</h2>
+                        <p style="font-family:'Arial';font-size:12px" class="first">
+                            Name&nbsp;&nbsp;</p>
+                                <input name="customer_name" id="name" size="30" type="text" style="margin-left:10px"><br>
+        
+                        <p style="font-family:'Arial';font-size:12px;" class="first"><br>
+                            Email Address:&nbsp;&nbsp;</p>
+                                <input name="customer_email" id="email" size="40" type="text" style="margin-left:10px"><br> <br>
+        
+                        <p style="font-family:'Arial';;font-size:12px;" class="first">
+                            Phone: &nbsp;&nbsp;</p>
+                                <input name="customer_phone" id="phone" size="40" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Address Line 1: &nbsp;&nbsp;</p> 
+                                <input name="customer_address_one" id="addressOne" size="40" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Address Line 2: &nbsp;&nbsp;</p>
+                                <input name="customer_address_two" size="40" id="addressTwo" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            City: &nbsp;&nbsp;</p>
+                                <input name="customer_city"size="40" id="city" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';font-size:12px;margin-left:10px">State: &nbsp;&nbsp;</p>
+                            <select name="customer_state"id="state" style="margin-left:10px">
+                                <option value="Select">Select</option>
+                                <option value="AL">AL - Alabama</option>
+                                <option value="AK">AK - Alaska</option>
+                                <option value="AR">AR - Arkansas</option>
+                                <option value="CA">CA - California</option>
+                                <option value="CO">CO - Colorado</option>
+                                <option value="CT">CT - Connecticut</option>
+                                <option value="DE">DE - Delaware</option>
+                                <option value="FL">FL - Florida</option>
+                                <option value="GA">GA - Georgia</option>
+                                <option value="HI">HI - Hawaii</option>
+                                <option value="ID">ID - Idaho</option>
+                                <option value="IL">IL - Illinois</option>
+                                <option value="IN">IN - Indiana</option>
+                                <option value="IA">IA - Iowa</option>
+                                <option value="KS">KS - Kansas</option>
+                                <option value="KY">KY - Kentucky</option>
+                                <option value="LA">LA - Louisiana</option>
+                                <option value="ME">ME - Maine</option>
+                                <option value="MD">MD - Maryland</option>
+                                <option value="MA">MA - Massachusetts</option>
+                                <option value="MI">MI - Michigan</option>
+                                <option value="MN">MN - Minnesota</option>
+                                <option value="MS">MS - Mississippi</option>
+                                <option value="MO">MO - Missouri</option>
+                                <option value="MT">MT - Montana</option>
+                                <option value="NE">NE - Nebraska</option>
+                                <option value="NV">NV - Nevada</option>
+                                <option value="NH">NH - New Hampshire</option>
+                                <option value="NJ">NJ - New Jersey</option>
+                                <option value="NM">NM - New Mexico</option>
+                                <option value="NY">NY - New York</option>
+                                <option value="NC">NC - North Carolina</option>
+                                <option value="ND">ND - North Dakota</option>
+                                <option value="OH">OH - Ohio</option>
+                                <option value="OK">OK - Oklahoma</option>
+                                <option value="OR">OR - Oregon</option>
+                                <option value="PA">PA - Pennsylvania</option>
+                                <option value="RI">RI - Rhode Island</option>
+                                <option value="SC">SC - South Carolina</option>
+                                <option value="SD">SD - South Dakota</option>
+                                <option value="TN">TN - Tennessee</option>
+                                <option value="TX">TX - Texas</option>
+                                <option value="UT">UT - Utah</option>
+                                <option value="VT">VT - Vermont</option>
+                                <option value="VA">VA - Virginia</option>
+                                <option value="WA">WA - Washington</option>
+                                <option value="WV">WV - West Virginia</option>
+                                <option value="WI">WI - Wisconsin</option>
+                                <option value="WY">WY - Wyoming</option>
+                            </select>
+
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Zip Code: &nbsp;&nbsp;</p>
+                                <input name="customer_zip"size="40" id="zip" type="text" style="margin-left:10px"></input><br>
+        
+                        <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
+                            Delivery Instructions: &nbsp;&nbsp;</p>
+                                <input name="delivery_instructions" id="instructions" size="100" height="100px"type="text" style="margin-left:10px;height:97px"></input><br>
+                        <br>
+                        <br> 
+                    </div>
+                </form> 
+            <form>
+                <input type="submit" style="margin-left:69.5em;margin-top:-20emm" value="Place Order " onclick="javascript:getValues();">
+                <input type="reset" style="margin-left:69.5em;margin-top:-20em" onclick="javascript:resetForm()"/> 
+            </form>
+            
+            <iframe src="size_chart.html" style="margin-left:50px;margin-bottom:100px;margin-top:50px" height="300" width="600"></iframe>
+            <iframe src="throwback_jersey_price.html" style="margin-left:110px;margin-top:50px;margin-bottom:100px" height="300" width="600"></iframe>
+
+            <script type="text/javascript">
+                // This function resets the form fields, depending on the number of clicks GW 05/09/2020
+
+                reset_count = 0
+
+                function resetForm() {
+                    if (reset_count == 0 ) {
+                        reset_count += 1
+                        document.getElementById("order_form").reset();
+                    } else if (reset_count == 1) {
+                        reset_count += 1
+                        document.getElementById("shipping_form").reset();
+                        reset_count = 0
+                    }
+                }
+                // This function creates a new window to print the customer's shipping information.
+                // This function uses the getShippingValues helper function to pull values from the 
+                // shipping_form. GW 05/06/2020
+
+                function printOrder(customer_name, customer_email, customer_phone, customer_city, customer_state, customer_zip, 
+                                    delivery_instructions, address, embroidery_text, emb_loc, pocket, size, color)
+                    {
+                        var new_window;
+                        new_window=window.open("","","status=0,height=500,width=500")
+                        new_window.focus();
+                        new_window.document.write("<h1>Shipping Information</h1>" + "<br>", "Name: "+customer_name + "<br>", 
+
+                                    "Email: " + customer_email + "<br>", 
+                                    "Phone: " + customer_phone + "<br>",
+                                    "City: "+ customer_city + "<br>",
+                                    "State: "+ customer_state + "<br>",
+                                    "Zip Code: "+ customer_zip + "<br>",
+                                    "Address: "+ address + "<br>",
+                                    "Delivery Instructions: "+ delivery_instructions + "<br>",
+
+                                    "<h1>Order Information</h1>" + "<br>",
+                                    "Throwback Jersey" + "<br>",
+                                    "Jersey Color: "+ color + "<br>",
+                                    "Jersey Size: "+ size + "<br>",
+                                    "Pocket(s): "+ pocket + "<br>",
+                                    "Embroidery Location: "+ emb_loc + "<br>",
+                                    "Embroidery Text: "+ embroidery_text + "<br>");
+
+                        new_window.close;
+                    }
+
+
+                // This function validates and gets the values for all of the form fields
+                // The order information is validated first, in sequential order to ensure 
+                // that the error thrown is based on the first missing field
+                // GW 05/09/2020
+                
+                function getValues()
+                    {              
+                    /*=================ORDER INFORMATION==========================*/  
+                        // Validate Jersey Color GW 05/09/2020
+                        if (((document.getElementById("color0").checked) == false) && ((document.getElementById("color1").checked) == false) && 
+                                ((document.getElementById("color2").checked) == false)){
+                                    alert("Please Choose a Color");
+                                    return;
+                        } else {
+                                /*Get the Value of the Jersey Color*/
+                                if ((document.getElementById("color2").checked) == true) {
+                                    var color = "Grey";
+                                }
+                                else if ((document.getElementById("color1").checked) == true) {
+                                    var color = "Black";
+                                }
+                                else if ((document.getElementById("color0").checked) == true) {
+                                    var color = "White";
+                            }
+                        }
+
+                        // Validate Jersey Size Selection GW 05/09/2020 
+                        if (((document.getElementById("size0").checked) == false) && ((document.getElementById("size1").checked) == false) && 
+                                ((document.getElementById("size2").checked) == false) && 
+                                ((document.getElementById("size3").checked) == false) && 
+                                ((document.getElementById("size4").checked) == false)){
+                                    alert("Please Choose a Size");
+                                    return;
+
+                        } else { // Get the Value of the Jersey Size GW 05/09/2020
+                                if ((document.getElementById("size4").checked)  == true) {
+                                    var size = "Extra Large";
+                                }
+                                else if ((document.getElementById("size3").checked)  == true) {
+                                    var size = "Large";
+                                }
+                                else if ((document.getElementById("size2").checked)  == true) {
+                                    var size = "Medium";
+                                }
+                               else  if ((document.getElementById("size1").checked)  == true) {
+                                    var size = "Small";
+                                }
+                                else if ((document.getElementById("size0").checked)  == true) {
+                                    var size = "Extra Small";
+                            }
+                        }
+
+                        // Validate Jersey Pocket Selection GW 05/09/2020
+                        if (((document.getElementById("pocket0").checked) == false) && ((document.getElementById("pocket1").checked) == false) && 
+                                ((document.getElementById("pocket2").checked) == false) && 
+                                ((document.getElementById("pocket3").checked) == false) && 
+                                ((document.getElementById("pocket4").checked) == false)){
+                                    alert("Please Choose Number of Pocket(s)");
+                                    return;
+
+                        } else { // Get the Value of the Pockets GW 05/09/2020
+                                if ((document.getElementById("pocket4").checked)  == true) {
+                                    var pocket = "No Pockets";
+                                }
+                                else if ((document.getElementById("pocket3").checked)  == true) {
+                                    var pocket = "1 Pocket";
+                                }
+                                else if ((document.getElementById("pocket2").checked)  == true) {
+                                    var pocket = "2 Pockets";
+                                }
+                                else if ((document.getElementById("pocket1").checked)  == true) {
+                                    var pocket = "3 Pockets";
+                                }
+                                else if ((document.getElementById("pocket0").checked)  == true) {
+                                    var pocket = "4 Pockets";
+                            }
+                        }
+
+                        // Validate Jersey Embroidery GW 05/09/2020
+                        if (((document.getElementById("emb_loc_0").checked) == false) && ((document.getElementById("emb_loc_1").checked) == false) && 
+                                ((document.getElementById("emb_loc_2").checked) == false) && 
+                                ((document.getElementById("emb_loc_3").checked) == false) && 
+                                ((document.getElementById("emb_loc_4").checked) == false)){
+                                    alert("Please Choose Location of Embroidery");
+                                    return;
+
+                        } else { // Get the Value of the Emboidery Location GW 05/09/2020
+
+                            // Get the Value of the Embroidery Location GW 05/09/2020
+                            if ((document.getElementById("emb_loc_4").checked)  == true) {
+                                var emb_loc = "No Embroidery";
+                            }
+                            else if ((document.getElementById("emb_loc_3").checked)  == true) {
+                                var emb_loc = "Lower Back";
+                            }
+                            else if ((document.getElementById("emb_loc_2").checked)  == true) {
+                                var emb_loc = "Upper Back";
+                            }
+                            else if ((document.getElementById("emb_loc_1").checked)  == true) {
+                                var emb_loc = "Left Chest";
+                            }
+                            else if ((document.getElementById("emb_loc_0").checked)  == true) {
+                                var emb_loc = "Right Chest";
+                            }
+                        }
+
+                        // Validate Embroidery Text GW 05/09/2020
+                        emb_text = document.getElementById("emb_text").value
+                        
+                        if (((document.getElementById("emb_loc_0").checked) == true) || 
+                                ((document.getElementById("emb_loc_1").checked) == true) || 
+                                ((document.getElementById("emb_loc_2").checked) == true) || 
+                                ((document.getElementById("emb_loc_3").checked) == true))
+
+                                { if (emb_text == ""){ 
+                                    alert("Please Enter Your Embroidery Text");
+                                    return;
+
+                                }  else {
+                                    var embroidery_text = order_form.embroidery_text.value;
+                                }
+                            } else {
+                            var embroidery_text = "N/A"
+                        }
+
+                /*=====================SHIPPING INFORMATION======================*/
+
+                        // Validate Customer Name GW 05/09/2020
+                        cust_name = document.getElementById("name").value
+                        if (cust_name == ""){ 
+                            alert("Please Enter Name");
+                            return;
+                        } else {
+                            var customer_name = shipping_form.customer_name.value;
+                            
+                        }
+
+                        // Validate Customer Email GW 05/28/2020
+                        //https://www.w3schools.com/jsref/jsref_includes.asp
+                        // https://www.javascripttutorial.net/es6/javascript-string-includes/
+                        cust_email = document.getElementById("email").value
+
+                        if (cust_email == "") {
+                            alert("Please Enter Email");
+                            return;
+
+                        } else {
+
+                            // Variable declarations to be used below
+                            var string_customer_email = cust_email.toString();
+                            var at_included = string_customer_email.includes('@');
+                            var period_included = string_customer_email.includes('.');
+                            var last_index = (string_customer_email.length-1)
+                            var fourth_last_index = (string_customer_email.length-4)
+                            var third_last_index = (string_customer_email.length-3)
+
+                            // Check if @ sign and . are included in email
+                            if ((at_included == true) && (period_included == true)) {
+
+                                // Check if @ sign is first or last character
+                                if (((string_customer_email.charAt(0)) != '@') &&
+                                ((string_customer_email.charAt((last_index))) != '@')) {
+
+                                    // Check if period is the third or fourth to last character
+                                    if (((string_customer_email.charAt(fourth_last_index)) == '.') || 
+                                        ((string_customer_email.charAt(third_last_index)) == '.')) {
+
+                                            // Email is valid; pass to window function
+                                            var customer_email = shipping_form.customer_email.value;
+
+                                        } else {
+                                            alert("Please Enter a Valid Email; period is not in fourth or third positions");
+                                            return;
+                                        }
+
+                                } else {
+                                    alert("Please Enter a Valid Email; @ character is incorrectly first or last ");
+                                    return;
+                                }
+                            } else {
+
+                                alert("Please Enter a Valid Email; missing period and at symbol");
+                                return;
+                            } 
+                        }
+
+                        // Validate Customer Address GW 05/09/2020
+                        address_one = document.getElementById("addressOne").value
+                        address_two = document.getElementById("addressTwo").value
+
+                        if (address_one == ""){ 
+                            if (address_two == "") {
+                                alert("Please Enter address");
+                                return;
+                            } else {
+                                
+                                var address = (shipping_form.customer_address_two.value);
+                            }
+
+                        } else {
+                            var address = (shipping_form.customer_address_one.value) + " " + (shipping_form.customer_address_two.value);
+                            
+                        }
+
+                        var customer_phone = document.getElementById("phone").value
+                        var integers = ["0","1","2","3","4","5","6","7","8","9"];
+                        if (customer_phone == "") { 
+                            alert("Please Enter Phone Number");
+                            return;
+                        } else {
+
+                            var string_customer_phone = customer_phone.toString()
+                            alert(customer_phone);
+
+                            // Check if phone number is in format: (###)###-####
+
+                            if (customer_phone.length == 13) {
+                                if (((customer_phone.charAt(0)) == "(") &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) in integers) &&
+                                ((string_customer_phone.charAt(4)) == ")") &&
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) in integers) && 
+                                ((string_customer_phone.charAt(8)) == "-") &&
+                                ((string_customer_phone.charAt(9)) in integers) &&
+                                ((string_customer_phone.charAt(10)) in integers) &&
+                                ((string_customer_phone.charAt(11)) in integers) &&
+                                ((string_customer_phone.charAt(12)) in integers)){
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                            } else {
+                                alert("Incorrect phone number format; please try again.");
+                                return;
+                            }
+
+                            //  Check if phone number is in format: ###-###-####
+
+                            } else if (customer_phone.length == 12) {
+                                if (((customer_phone.charAt(0)) in integers) &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) == "-") &&
+                                ((string_customer_phone.charAt(4)) in integers) && 
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) == "-") &&
+                                ((string_customer_phone.charAt(8)) in integers) &&
+                                ((string_customer_phone.charAt(9)) in integers) &&
+                                ((string_customer_phone.charAt(10)) in integers) &&
+                                ((string_customer_phone.charAt(11)) in integers)) {
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                             //  Check if phone number is in format: (###)#######
+
+                            }  else if (((customer_phone.charAt(0)) == "(") &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) in integers) &&
+                                ((string_customer_phone.charAt(4)) == ")") &&
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) in integers) &&
+                                ((string_customer_phone.charAt(8)) in integers) &&
+                                ((string_customer_phone.charAt(9)) in integers) &&
+                                ((string_customer_phone.charAt(10)) in integers) &&
+                                ((string_customer_phone.charAt(11)) in integers)) {
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                            }  else {
+                                    alert("Incorrect phone number format; please try again.")
+                                    return;
+                            }
+
+                            //  Check if phone number is in format: ##########
+
+                            } else  if (customer_phone.length == 10) {
+                                if (((customer_phone.charAt(0)) in integers) &&
+                                ((string_customer_phone.charAt(1)) in integers) &&
+                                ((string_customer_phone.charAt(2)) in integers) &&
+                                ((string_customer_phone.charAt(3)) in integers) &&
+                                ((string_customer_phone.charAt(4)) in integers) &&
+                                ((string_customer_phone.charAt(5)) in integers) && 
+                                ((string_customer_phone.charAt(6)) in integers) && 
+                                ((string_customer_phone.charAt(7)) in integers) &&
+                                ((string_customer_phone.charAt(8)) in integers) &&
+                                ((string_customer_phone.charAt(9)) in integers)) {
+
+                                    var customer_phone = shipping_form.customer_phone.value;
+
+                                }
+                            } else {
+                                alert("Incorrect phone number format; please try again.")
+                                return;
+                            }
+                        }
+
+                        // Validate Customer City GW 05/09/2020
+                        customer_city = document.getElementById("city").value
+                        if (customer_city == "") { 
+                            alert("Please Enter City");
+                            return;
+                        } else {
+                            var customer_city = shipping_form.customer_city.value;
+                        }
+
+
+                        // Validate the customer state GW 05/10/2020
+                        var selectedState = document.getElementById ("state");
+                        var state = selectedState.options[selectedState.selectedIndex].text;
+                        if (state == "Select") {
+                            alert("Please choose a state.");
+                            return;
+                        } else {
+                            state = state
+                        }
+                        
+                        // Validate Customer Zip Code GW 05/09/2020
+                        customer_zip = document.getElementById("zip").value
+                        if (customer_zip == "") { 
+                            alert("Please Enter Zip Code");
+                            return;
+                        } else {
+                            var customer_zip = shipping_form.customer_zip.value;
+                        }
+
+                        // Validate Delivery Instructions GW 05/09/2020
+                        if ((document.getElementById("instructions").checked) = false){ 
+                            var delivery_instructions = "N/A";
+                            return;
+                        } else {
+                            var delivery_instructions = shipping_form.delivery_instructions.value;
+                            
+                        }
+
+                        // Print the order confirmation form after validation GW 05/09/2020
+                        printOrder(customer_name, customer_email, customer_phone, 
+                                    customer_city, state, customer_zip, 
+                                    delivery_instructions, address, embroidery_text, 
+                                    emb_loc, pocket, size, color);
+                    }
+            </script>
+    </body>
+</html>
