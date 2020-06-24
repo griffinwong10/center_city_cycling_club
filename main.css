@@ -1,9 +1,9 @@
 /*
 ==================================================
-Project Name: Weeks 5 & 6 - Assignment 6 - Team 17
+Project Name: Week 8 - Assignment 7 - Team 17
 Project Description: CSS Style Page
-DUE DATE: 05/13/2020 23:59:59
-LAST EDIT (DATE/TIME): 05/11/2020 13:16:30 EST GW
+DUE DATE: 06/03/2020 23:59:59
+LAST EDIT (DATE/TIME): 05/27/2020 13:16:30 EST GW
 Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 ==================================================
 */
@@ -19,17 +19,15 @@ body {
 Reference: https://www.w3schools.com/cssref/pr_background-image.asp
 Reference: https://unsplash.com/@maicoamorim?utm_source=trello&utm_medium=referral&utm_campaign=api-credit*/
 .imageContainerOne {
-    position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
     width:1440px;
-    height:215px;
+    height:269px;
     margin-bottom: 0em;
     margin-top: 0em;
     background-image: url("pic9.jpg");
 }
-
 
 /* Added Font Style for the Header/Banner 05/08/2020
     Reference: https://www.w3schools.com/w3css/w3css_fonts.asp */
@@ -38,7 +36,7 @@ Reference: https://unsplash.com/@maicoamorim?utm_source=trello&utm_medium=referr
     font-size:60px;
     color:darkorange;
     text-align:center;
-    margin-top: 1.35em;
+    margin-top: 50em;
 }
 
 /* Product Page Column GW 05/08/2020 */
@@ -126,17 +124,32 @@ div.gallery img {
     width: 25%;
 }
 
+.columnFifths {
+    float: left;
+    width: 20%;
+}
+
+.columnthirds {
+    float: left;
+    width: 33%;
+}
+
 .row:after {/* Clear floats after the columns */
     content: "";
     display: table;
     clear: both;
 }
 
+.center-input {
+    text-align: center;
+}
+
+
 
 /*Product Page and Registration Page Buttons GW 05/08/2020*/
 .buttonOne {
     border-radius: 8px;
-    background-color: orange;
+    background-color:#FC6100;
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -250,3 +263,55 @@ div.gallery img {
     display: table;
     clear: both; 
 }
+
+.full-width-image {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    height: 100px;
+    margin-top: 100px;
+    left: 50%;
+}
+
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #b3b3b3;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    margin-left:-8px;
+    z-index: 300;
+  }
+  
+
+.brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -175px !important;
+    display: block;
+}
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change background on mouse-over */
+  .navbar a:hover {
+    color: darkorange;
+  }
+  
+  .navbar-header {
+    text-align: center;
+  }
+
+  /* Main content */
+  .main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
+  }
