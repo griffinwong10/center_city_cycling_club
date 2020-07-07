@@ -1,25 +1,50 @@
 <!DOCTYPE html>
+
 <!--
-=========================================
-Project Name: Registration Form
-Project Description: This will be the registration form the users will
-fill out to register for our club hosted events 
-Last Edit Date: 5/11/2020 GW
-Due Date:  05/13/2020
-Programmer Name: Jacob Wong & Griffin Wong
-==========================================
+=====================================================================================
+Project Name: Week 9 | Assignment 7 | Team 17
+
+Project Description: Tour the Shore Registration Page; Addition of iFrame pricing 
+tables on registration pages and order pages; Phone number validation on order page 
+forms; Email validation on order page forms; Added of navigation bar
+
+DUE DATE: 06/07/2020 23:59:59
+
+LAST EDIT (DATE/TIME): 06/07/2020 20:07:21 EST GW
+
+Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
+======================================================================================
 -->
+
 <html lang="en">
     <!--Registration form JW 05/07/2020-->
     <head> <!--Reformatted the header and added icon image GW 05/09/2020-->
-        <meta charset = "utf-8">
-        <link rel="icon" href="images/CCCC-C.png">
-        <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
         <title>Tour the Shore | CCCC Events</title><br><br>
+        <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+        <meta charset="utf-8"/>
+        <link rel="icon" href="CCCC-C.png"/>
+        <div class="navbar">
+            <a href="index.html" style="color:black;font-family: 'Roboto Condensed'">Home</a>
+            <a href="registration.html" style="color:black;font-family: 'Roboto Condensed'">Events</a>
+            <a href="product_page.html" style="color:black;font-family: 'Roboto Condensed'">Products</a>
+            <a href="" style="color:black;font-family: 'Roboto Condensed'">News</a>
+            <a style="color:white;font-family:Monoton;font-size:larger;text-align:center">&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Center City Cycling Club</a>
+            <a href="" style="float:right"><img src="trolley-512.png" style="width:20px; height:20px"></a>
+            <a href="" style="float:right;color:black;font-family: 'Roboto Condensed'">Account</a>
+          </div>
     </head>
+    <br><br>
 
     <body style="font-family: 'Arial'">
-        <div class="imageContainerTwo"></div>
         <h1 style="text-align:center;font-family: 'Roboto Condensed', sans-serif;color:darkorange">Tour the Shore Event Registration</h1>
         <form name="registration" id="registration_form">
             <div>		
@@ -182,7 +207,7 @@ Programmer Name: Jacob Wong & Griffin Wong
 
         <form>
             <!--Changed the type of the button to submit GW 05/10/2020-->
-            <input type="submit" value="Submit" onclick="javascript:values();"/>
+            <button type="button"  onclick="javascript:values()" style="margin-left:70.5em;margin-top:-20emm">Submit</button>
             <!--Changed the type of the button to reset GW 05/10/2020-->
             <!--Renamed function to resetForm; reset() is taken as a built-in function in JavaScript GW 05/10/2020-->
             <input type="reset" onclick="javascript:resetForm()"/>
@@ -315,13 +340,110 @@ Programmer Name: Jacob Wong & Griffin Wong
                             var dob = registration.dob.value;
                         }
 
-                        /*Validate Customer Phone*/
-                        PhoneNumber = document.getElementById("phone").value
+
+                        // Validate Customer Phone GW 05/09/2020
+
+                        // Accepted Formats:
+                            // (###)###-####
+                            // ###-###-####
+                            // (###)#######
+                            // ##########
+
+                            var PhoneNumber = document.getElementById("phone").value
+                        var integers = ["0","1","2","3","4","5","6","7","8","9"];
                         if (PhoneNumber == "") { 
                             alert("Please Enter Phone Number");
                             return;
                         } else {
-                            var phone = registration.phone.value;
+
+                            var string_PhoneNumber = PhoneNumber.toString()
+                            alert(PhoneNumber);
+
+                            // Check if phone number is in format: (###)###-####
+
+                            if (PhoneNumber.length == 13) {
+                                if (((PhoneNumber.charAt(0)) == "(") &&
+                                ((string_PhoneNumber.charAt(1)) in integers) &&
+                                ((string_PhoneNumber.charAt(2)) in integers) &&
+                                ((string_PhoneNumber.charAt(3)) in integers) &&
+                                ((string_PhoneNumber.charAt(4)) == ")") &&
+                                ((string_PhoneNumber.charAt(5)) in integers) && 
+                                ((string_PhoneNumber.charAt(6)) in integers) && 
+                                ((string_PhoneNumber.charAt(7)) in integers) && 
+                                ((string_PhoneNumber.charAt(8)) == "-") &&
+                                ((string_PhoneNumber.charAt(9)) in integers) &&
+                                ((string_PhoneNumber.charAt(10)) in integers) &&
+                                ((string_PhoneNumber.charAt(11)) in integers) &&
+                                ((string_PhoneNumber.charAt(12)) in integers)){
+
+                                    var phone = registration.phone.value;
+
+                            } else {
+                                alert("Incorrect phone number format; please try again.");
+                                return;
+                            }
+
+                            //  Check if phone number is in format: ###-###-####
+
+                            } else if (PhoneNumber.length == 12) {
+                                if (((PhoneNumber.charAt(0)) in integers) &&
+                                ((string_PhoneNumber.charAt(1)) in integers) &&
+                                ((string_PhoneNumber.charAt(2)) in integers) &&
+                                ((string_PhoneNumber.charAt(3)) == "-") &&
+                                ((string_PhoneNumber.charAt(4)) in integers) && 
+                                ((string_PhoneNumber.charAt(5)) in integers) && 
+                                ((string_PhoneNumber.charAt(6)) in integers) && 
+                                ((string_PhoneNumber.charAt(7)) == "-") &&
+                                ((string_PhoneNumber.charAt(8)) in integers) &&
+                                ((string_PhoneNumber.charAt(9)) in integers) &&
+                                ((string_PhoneNumber.charAt(10)) in integers) &&
+                                ((string_PhoneNumber.charAt(11)) in integers)) {
+
+                                    var phone = registration.phone.value;
+
+                             //  Check if phone number is in format: (###)#######
+
+                            }  else if (((PhoneNumber.charAt(0)) == "(") &&
+                                ((string_PhoneNumber.charAt(1)) in integers) &&
+                                ((string_PhoneNumber.charAt(2)) in integers) &&
+                                ((string_PhoneNumber.charAt(3)) in integers) &&
+                                ((string_PhoneNumber.charAt(4)) == ")") &&
+                                ((string_PhoneNumber.charAt(5)) in integers) && 
+                                ((string_PhoneNumber.charAt(6)) in integers) && 
+                                ((string_PhoneNumber.charAt(7)) in integers) &&
+                                ((string_PhoneNumber.charAt(8)) in integers) &&
+                                ((string_PhoneNumber.charAt(9)) in integers) &&
+                                ((string_PhoneNumber.charAt(10)) in integers) &&
+                                ((string_PhoneNumber.charAt(11)) in integers)) {
+
+                                    var phone = registration.phone.value;
+
+                            }  else {
+                                    alert("Incorrect phone number format; please try again.")
+                                    return;
+                            }
+
+                            //  Check if phone number is in format: ##########
+
+                            } else  if (PhoneNumber.length == 10) {
+                                if (((PhoneNumber.charAt(0)) in integers) &&
+                                ((string_PhoneNumber.charAt(1)) in integers) &&
+                                ((string_PhoneNumber.charAt(2)) in integers) &&
+                                ((string_PhoneNumber.charAt(3)) in integers) &&
+                                ((string_PhoneNumber.charAt(4)) in integers) &&
+                                ((string_PhoneNumber.charAt(5)) in integers) && 
+                                ((string_PhoneNumber.charAt(6)) in integers) && 
+                                ((string_PhoneNumber.charAt(7)) in integers) &&
+                                ((string_PhoneNumber.charAt(8)) in integers) &&
+                                ((string_PhoneNumber.charAt(9)) in integers)) {
+
+                                    var phone = registration.phone.value;
+
+                                }
+                            } else {
+                                alert("Incorrect phone number format; please try again.")
+                                return;
+                            }
                         }
 
                         /*Validate Customer Address*/
