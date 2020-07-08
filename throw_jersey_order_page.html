@@ -2,15 +2,15 @@
 
 <!--
 =====================================================================================
-Project Name: Week 8 | Assignment 7 | Team 17
+Project Name: Week 9 | Assignment 7 | Team 17
 
 Project Description: Order page for Throwback Jersey; Addition of iFrame pricing 
 tables on registration pages and order pages; Phone number validation on order page 
-forms; Email validation on order page forms
+forms; Email validation on order page forms; Added of navigation bar
 
-DUE DATE: 06/03/2020 23:59:59
+DUE DATE: 06/07/2020 23:59:59
 
-LAST EDIT (DATE/TIME): 05/27/2020 20:07:21 EST GW
+LAST EDIT (DATE/TIME): 06/07/2020 20:07:21 EST GW
 
 Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 ======================================================================================
@@ -39,13 +39,32 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 <html lang="en">
 
     <head>
-        <meta charset = "utf-8">
-        <link rel="icon" href="CCCC-C.png">
+        <title>Customization</title>
         <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
-        <div class="imageContainerTwo"></div>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+        <meta charset="utf-8"/>
+        <link rel="icon" href="CCCC-C.png"/>
+        <div class="navbar">
+            <a href="index.html" style="color:black;font-family: 'Roboto Condensed'">Home</a>
+            <a href="registration.html" style="color:black;font-family: 'Roboto Condensed'">Events</a>
+            <a href="product_page.html" style="color:black;font-family: 'Roboto Condensed'">Products</a>
+            <a href="" style="color:black;font-family: 'Roboto Condensed'">News</a>
+            <a style="color:white;font-family:Monoton;font-size:larger;text-align:center">&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Center City Cycling Club</a>
+            <a href="" style="float:right"><img src="trolley-512.png" style="width:20px; height:20px"></a>
+            <a href="" style="float:right;color:black;font-family: 'Roboto Condensed'">Account</a>
+          </div>
     </head>
 
     <body>
+        
         <!--ORDER INFORMATION-->
         <form name= "order_information_form" id="order_form"> 
             <div class="columnOne" style="background-color:#f2f2f2;margin-top:5em">
@@ -115,10 +134,9 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                         <row class="row">
                             <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
                                 <b>Embroidery Text: &nbsp;&nbsp;</b></p>
-                                    <input name="embroidery_text" id="emb_text" size="100" height="100px"type="text" style="margin-left:10px;height:100px"></input><br>
+                                    <input name="embroidery_text" id="emb_text" size="80" height="100px"type="text" style="margin-left:10px;height:100px"></input><br>
                         </row>
                         <br>
-                        <br> 
                     </div>
                 </div>
             </form>
@@ -212,14 +230,19 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
         
                         <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
                             Delivery Instructions: &nbsp;&nbsp;</p>
-                                <input name="delivery_instructions" id="instructions" size="100" height="100px"type="text" style="margin-left:10px;height:97px"></input><br>
+                                <input name="delivery_instructions" id="instructions" size="80" height="100px"type="text" style="margin-left:10px;height:97px"></input><br>
                         <br>
-                        <br> 
                     </div>
                 </form> 
             <form>
-                <input type="submit" style="margin-left:69.5em;margin-top:-20emm" value="Place Order " onclick="javascript:getValues();">
-                <input type="reset" style="margin-left:69.5em;margin-top:-20em" onclick="javascript:resetForm()"/> 
+                <row>
+                    <column>
+                        <button type="button" style="margin-left:70.5em;margin-top:-20emm" value="" onclick="javascript:getValues();">Place Order </button>
+                    </column>
+                    <column>
+                        <input type="reset" style="margin-left:0.5em;margin-top:-25em" onclick="javascript:resetForm()"/> 
+                    </column>
+                </row>
             </form>
             
             <iframe src="size_chart.html" style="margin-left:50px;margin-bottom:100px;margin-top:50px" height="300" width="600"></iframe>
@@ -443,7 +466,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                                             var customer_email = shipping_form.customer_email.value;
 
                                         } else {
-                                            alert("Please Enter a Valid Email; period is not in fourth or third positions");
+                                            alert("Please Enter a Valid Email; period is not in fourth or third  to last positions");
                                             return;
                                         }
 
