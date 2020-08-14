@@ -2,15 +2,15 @@
 
 <!--
 =====================================================================================
-Project Name: Week 8 | Assignment 7 | Team 17
+Project Name: Week 9 | Assignment 7 | Team 17
 
 Project Description:  Order page for Topo Shorts; Addition of iFrame pricing 
 tables on registration pages and order pages; Phone number validation on order page 
-forms; Email validation on order page forms
+forms; Email validation on order page forms; Added of navigation bar
 
-DUE DATE: 06/03/2020 23:59:59
+DUE DATE: 06/07/2020 23:59:59
 
-LAST EDIT (DATE/TIME): 05/27/2020 20:07:21 EST GW
+LAST EDIT (DATE/TIME): 06/07/2020 20:07:21 EST GW
 
 Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 ======================================================================================
@@ -38,10 +38,28 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 <html lang="en">
 
     <head>
-        <meta charset = "utf-8">
-        <link rel="icon" href="CCCC-C.png">
+        <title>Customization</title>
         <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
-        <div class="imageContainerTwo"></div>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+        <meta charset="utf-8"/>
+        <link rel="icon" href="CCCC-C.png"/>
+        <div class="navbar">
+            <a href="index.html" style="color:black;font-family: 'Roboto Condensed'">Home</a>
+            <a href="registration.html" style="color:black;font-family: 'Roboto Condensed'">Events</a>
+            <a href="product_page.html" style="color:black;font-family: 'Roboto Condensed'">Products</a>
+            <a href="" style="color:black;font-family: 'Roboto Condensed'">News</a>
+            <a style="color:white;font-family:Monoton;font-size:larger;text-align:center">&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Center City Cycling Club</a>
+            <a href="" style="float:right"><img src="trolley-512.png" style="width:20px; height:20px"></a>
+            <a href="" style="float:right;color:black;font-family: 'Roboto Condensed'">Account</a>
+          </div>
     </head>
 
     <body>
@@ -104,10 +122,9 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                         <row class="row">
                             <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
                                 <b>Embroidery Text: &nbsp;&nbsp;</b></p>
-                                    <input name="embroidery_text" id="emb_text" size="100" height="100px"type="text" style="margin-left:10px;height:100px"></input><br>
+                                    <input name="embroidery_text" id="emb_text" size="80" height="100px"type="text" style="margin-left:10px;height:100px"></input><br>
                         </row>
                         <br>
-                        <br> 
                     </div>
                 </div>
             </form>
@@ -201,14 +218,19 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
         
                         <p style="font-family:'Arial';margin-top:15px;font-size:12px;" class="first">
                             Delivery Instructions: &nbsp;&nbsp;</p>
-                                <input name="delivery_instructions" id="instructions" size="100" height="100px"type="text" style="margin-left:10px;height:97px"></input><br>
+                                <input name="delivery_instructions" id="instructions" size="80" height="100px"type="text" style="margin-left:10px;height:97px"></input><br>
                         <br>
-                        <br> 
                     </div>
                 </form> 
             <form>
-                <input type="submit" style="margin-left:69.5em;margin-top:-20emm" value="Place Order " onclick="javascript:getValues();">
-                <input type="reset" style="margin-left:69.5em;margin-top:-20em" onclick="javascript:resetForm()"/> 
+                <row>
+                    <column>
+                        <button type="button" style="margin-left:70.5em;margin-top:-20emm" value="" onclick="javascript:getValues();">Place Order </button>
+                    </column>
+                    <column>
+                        <input type="reset" style="margin-left:0.5em;margin-top:-25em" onclick="javascript:resetForm()"/> 
+                    </column>
+                </row> 
             </form>
             
             <iframe src="size_chart.html" style="margin-left:50px;margin-bottom:100px;margin-top:50px" height="300" width="600"></iframe>
@@ -405,7 +427,7 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                                             var customer_email = shipping_form.customer_email.value;
 
                                         } else {
-                                            alert("Please Enter a Valid Email; period is not in fourth or third positions");
+                                            alert("Please Enter a Valid Email; period is not in fourth or third to last positions");
                                             return;
                                         }
 
@@ -422,33 +444,39 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
 
                         // Validate Customer Phone GW 05/09/2020
 
-
-                            var customer_phone = document.getElementById("phone").value
+                        var customer_phone = document.getElementById("phone").value
                         var integers = ["0","1","2","3","4","5","6","7","8","9"];
-                        if (customer_phone == "") { 
+
+                        if (customer_phone == "") {
                             alert("Please Enter Phone Number");
                             return;
+
                         } else {
 
                             var string_customer_phone = customer_phone.toString()
-                            alert(customer_phone);
 
-                            // Check if phone number is in format: (###)###-####
+                            var char_one = string_customer_phone.charAt(0)
+                            var char_two = string_customer_phone.charAt(1)
+                            var char_three = string_customer_phone.charAt(2)
+                            var char_four = string_customer_phone.charAt(3)
+                            var char_five = string_customer_phone.charAt(4)
+                            var char_six = string_customer_phone.charAt(5)
+                            var char_seven = string_customer_phone.charAt(6)
+                            var char_eight = string_customer_phone.charAt(7)
+                            var char_nine = string_customer_phone.charAt(8)
+                            var char_ten = string_customer_phone.charAt(9)
+                            var char_eleven = string_customer_phone.charAt(10)
+                            var char_twelve = string_customer_phone.charAt(11)
+                            var char_thirteen = string_customer_phone.charAt(12)
 
-                            if (customer_phone.length == 13) {
-                                if (((customer_phone.charAt(0)) == "(") &&
-                                ((string_customer_phone.charAt(1)) in integers) &&
-                                ((string_customer_phone.charAt(2)) in integers) &&
-                                ((string_customer_phone.charAt(3)) in integers) &&
-                                ((string_customer_phone.charAt(4)) == ")") &&
-                                ((string_customer_phone.charAt(5)) in integers) && 
-                                ((string_customer_phone.charAt(6)) in integers) && 
-                                ((string_customer_phone.charAt(7)) in integers) && 
-                                ((string_customer_phone.charAt(8)) == "-") &&
-                                ((string_customer_phone.charAt(9)) in integers) &&
-                                ((string_customer_phone.charAt(10)) in integers) &&
-                                ((string_customer_phone.charAt(11)) in integers) &&
-                                ((string_customer_phone.charAt(12)) in integers)){
+                           // Check if phone number is in format: (###)###-####
+
+                           if (customer_phone.length == 13) {
+                                if (((char_one) == "(") &&
+                                ((char_two, char_three, char_four, char_six, 
+                                    char_seven, char_eight, char_ten, char_eleven, 
+                                    char_twelve, char_thirteen) in integers) &&
+                                ((char_five) == ")") && ((char_nine) == "-")){
 
                                     var customer_phone = shipping_form.customer_phone.value;
 
@@ -460,35 +488,18 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             //  Check if phone number is in format: ###-###-####
 
                             } else if (customer_phone.length == 12) {
-                                if (((customer_phone.charAt(0)) in integers) &&
-                                ((string_customer_phone.charAt(1)) in integers) &&
-                                ((string_customer_phone.charAt(2)) in integers) &&
-                                ((string_customer_phone.charAt(3)) == "-") &&
-                                ((string_customer_phone.charAt(4)) in integers) && 
-                                ((string_customer_phone.charAt(5)) in integers) && 
-                                ((string_customer_phone.charAt(6)) in integers) && 
-                                ((string_customer_phone.charAt(7)) == "-") &&
-                                ((string_customer_phone.charAt(8)) in integers) &&
-                                ((string_customer_phone.charAt(9)) in integers) &&
-                                ((string_customer_phone.charAt(10)) in integers) &&
-                                ((string_customer_phone.charAt(11)) in integers)) {
+                                if (((char_one, char_two, char_three, char_five, char_six, char_seven, 
+                                        char_nine, char_ten, char_eleven, char_twelve) in integers) &&
+                                    ((char_four, char_eight) == "-")) {
 
                                     var customer_phone = shipping_form.customer_phone.value;
 
                              //  Check if phone number is in format: (###)#######
 
-                            }  else if (((customer_phone.charAt(0)) == "(") &&
-                                ((string_customer_phone.charAt(1)) in integers) &&
-                                ((string_customer_phone.charAt(2)) in integers) &&
-                                ((string_customer_phone.charAt(3)) in integers) &&
-                                ((string_customer_phone.charAt(4)) == ")") &&
-                                ((string_customer_phone.charAt(5)) in integers) && 
-                                ((string_customer_phone.charAt(6)) in integers) && 
-                                ((string_customer_phone.charAt(7)) in integers) &&
-                                ((string_customer_phone.charAt(8)) in integers) &&
-                                ((string_customer_phone.charAt(9)) in integers) &&
-                                ((string_customer_phone.charAt(10)) in integers) &&
-                                ((string_customer_phone.charAt(11)) in integers)) {
+                            }  else if (((char_one) == "(") &&
+                                ((char_five) == ")") && ((char_two,char_three,char_four, 
+                                    char_six,char_seven,char_eight, char_nine,char_ten,
+                                    char_eleven,char_twelve) in integers)) {
 
                                     var customer_phone = shipping_form.customer_phone.value;
 
@@ -500,16 +511,9 @@ Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
                             //  Check if phone number is in format: ##########
 
                             } else  if (customer_phone.length == 10) {
-                                if (((customer_phone.charAt(0)) in integers) &&
-                                ((string_customer_phone.charAt(1)) in integers) &&
-                                ((string_customer_phone.charAt(2)) in integers) &&
-                                ((string_customer_phone.charAt(3)) in integers) &&
-                                ((string_customer_phone.charAt(4)) in integers) &&
-                                ((string_customer_phone.charAt(5)) in integers) && 
-                                ((string_customer_phone.charAt(6)) in integers) && 
-                                ((string_customer_phone.charAt(7)) in integers) &&
-                                ((string_customer_phone.charAt(8)) in integers) &&
-                                ((string_customer_phone.charAt(9)) in integers)) {
+                                if (((char_one, char_two,char_three,
+                                    char_four, char_five, char_six, char_seven,char_eight,
+                                    char_nine,char_ten,char_eleven, char_twelve) in integers)) {
 
                                     var customer_phone = shipping_form.customer_phone.value;
 
