@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+=====================================================================================
+Project Name: Week 9 | Assignment 7 | Team 17
+
+Project Description: Addition of iFrame pricing tables on registration pages and order 
+pages; Phone number validation on registration forms and order page forms; Email 
+validation on registration forms and order page forms; Also addition of this page
+to display all of the products and lead to the product pages; Added of navigation bar
+
+DUE DATE: 06/07/2020 23:59:59
+
+LAST EDIT (DATE/TIME): 06/07/2020 19:07:21 EST GW
+
+Programmer Names: Griffin Wong(GW) Jacob Wong(JW)
+======================================================================================
+-->
+
+<html> <!--Added main.css file and reference to file GW 05/09/2020-->
+    <head>
+        <!--Added link image GW 05/09/2020-->
+        <link rel="icon" href="CCCC-C.png">
+        <meta charset = "utf-8">
+            <title>CCCC | Products</title>
+            <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
+        
+            <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+            <!--https://www.w3schools.com/howto/howto_css_fixed_menu.asp-->
+            <div class="navbar">
+                <a href="index.html" style="color:black;font-family: 'Roboto Condensed'">Home</a>
+                <a href="registration.html" style="color:black;font-family: 'Roboto Condensed'">Events</a>
+                <a href="product_page.html" style="color:black;font-family: 'Roboto Condensed'">Products</a>
+                <a href="https://www.nytimes.com/" style="color:black;font-family: 'Roboto Condensed'">News</a>
+                
+                <a style="color:#FC6100;font-family:monoton;font-size:larger;text-align:center">&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Center City Cycling Club</a>
+                <a href="" style="float:right"><img src="trolley-512.png" style="width:20px; height:20px"></a>
+                <a href="" style="float:right;color:black;font-family: 'Roboto Condensed'">Account</a>
+              </div>
+    
+            <!--Added Font Style for the Header/Banner GW 04/19/2020
+            Reference: https://www.w3schools.com/w3css/w3css_fonts.asp-->
+            <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    </head>
+
+        <body>
+            <br>
+            
+            <div>  <!-- product, the products were made using reference #1: GW 04/19/2020-->
+                <!-- Reference #1: https://www.voler.com/custom/3dDesignStudio#/catalogue/cycling -->
+                <br><br><br><br>
+                <hr>
+                <h3 style="text-align:center;font-family:'Roboto Condensed'">JERSEYS</h3>
+                <hr>
+
+                <div class="row">
+                    <div class="columnthirds">
+                        <a href="independence_jersey_prod_page.html">
+                        <img src="pic14.jpg" style="float: left; ; margin-right: 1%; margin-left: 5em;;margin-top: 0.8em" height="200"></a>
+                    </div>
+                    <div class="columnthirds">
+                    <a href="topo_jersey_prod_page.html">
+                        <img src="pic2.jpg" style="float: left;; margin-right: 1%; margin-left: 5em;margin-top: 0.8em" height="200"></a>
+                    </div>
+                    <div class="columnthirds">
+                        <a href="throwback_jersey_prod_page.html">
+                        <img src="pic11.jpg" style="float: left; margin-right: 1%; margin-left: 5em;margin-top: 0.8em" height="200"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="columnthirds">
+                        <h4 style="text-align:left;font-family:'Roboto Condensed';margin-left: 7.5em; margin-top: 5px;color:black">Independence Club Jersey</h4>
+                        <a href="independence_jersey_prod_page.html" style="text-align:left;font-family:'Roboto Condensed';margin-left: 10.5em;color:black">Shop Now</a>
+                    </div>
+                    <div class="columnthirds">
+                            <h4 style="text-align:left;font-family:'Roboto Condensed';margin-left: 8em;color:black">Topography Performance Jersey</h4>
+                            <a href="topo_jersey_prod_page.html" style="text-align:left;font-family:'Roboto Condensed';margin-left: 12.5em;color:black">Shop Now</a>
+                    </div>
+                    <div class="columnthirds">
+                        <h4 style="text-align:left;font-family:'Roboto Condensed';margin-left: 9.5em;color:black">Throwback Jersey NEW!</h4>
+                        <a href="throwback_jersey_prod_page.html" style="text-align:left;font-family:'Roboto Condensed';margin-left: 12em;color:black">Shop Now</a>
+                    </div>
+                </div>
+                <br><br>
+
+            </div>
+            <div>  <!-- product, the products were made using reference #1: GW 04/19/2020-->
+                <!-- Reference #1: https://www.voler.com/custom/3dDesignStudio#/catalogue/cycling -->
+                <hr>
+                <h3 style="text-align:center">SHORTS</h3>
+                <hr>
+
+                <div class="row">
+                    <div class="columnthirds">
+                        <a href="independence_shorts_prod_page.html">
+                        <img src="pic15.jpg" style="float: left; ; margin-right: 1%; margin-left: 5em;;margin-top: 0.8em" height="200"></a>
+                    </div>
+                    <div class="columnthirds">
+                    <a href="topo_shorts_prod_page.html">
+                        <img src="pic4.jpg" style="float: left;; margin-right: 1%; margin-left: 5em;margin-top: 0.8em" height="200"></a>
+                    </div>
+                    <div class="columnthirds">
+                        <a href="throwback_shorts_prod_page.html">
+                        <img src="pic10.jpg" style="float: left; margin-right: 1%; margin-left: 5em;margin-top: 0.8em" height="200"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="columnthirds">
+                        <h4 style="text-align:left;font-family:'Roboto Condensed';margin-left: 8.5em; margin-top: 5px;color:black">Independence Shorts</h4>
+                        <a href="independence_shorts_prod_page.html" style="text-align:left;font-family:'Roboto Condensed';margin-left: 10.5em;color:black">Shop Now</a>
+                    </div>
+                    <div class="columnthirds">
+                            <h4 style="text-align:left;font-family:'Roboto Condensed';margin-left: 9em;color:black">Topography Shorts</h4>
+                            <a href="topo_shorts_prod_page.html" style="text-align:left;font-family:'Roboto Condensed';margin-left: 10.5em;color:black">Shop Now</a>
+                    </div>
+                    <div class="columnthirds">
+                        <h4 style="text-align:left;font-family:'Roboto Condensed';margin-left: 9.5em;color:black">Throwback Shorts NEW!</h4>
+                        <a href="throwback_shorts_prod_page.html" style="text-align:left;font-family:'Roboto Condensed';margin-left: 12em;color:black">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+    </body>
+    </html>

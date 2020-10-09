@@ -1,0 +1,53 @@
+==========================================================================================================================================================================================
+==========================================================================================================================================================================================
+Hi everybody,
+
+When you do this assignment, please be sure to be careful about submitting it.  
+Zip all your associated files together, and submit the zip file to the Learn link in Week 7 Assignments. 
+Please put your team number and last names on the zip file.  This will help me a lot!  Thanks!
+
+Please continue to do maintenance on your web page for your team’s company.  Please add the following enhancements:
+
+==========================================================================================================================================================================================
+*DONE*  (1) Use iFrames to add a price table to your order form.  Format of the price table is your choice, as long as you use iFrames.
+
+==========================================================================================================================================================================================
+*DONE*  (2) Validate the phone number:  
+
+                REQUIREMENT:  PLEASE DO NOT USE REGULAR EXPRESSIONS. 
+                PLEASE DO NOT USE jQUERY, BUILT-IN VALIDATION FUNCTIONALITY or DOWNLOADED VALIDATION FUNCTIONS.  
+                I WANT YOU TO USE JavaScript STRING MANIPULATION TECHNIQUES ON THIS ASSIGNMENT.  THANK YOU!
+
+
+                (a) If the phone number is not empty, validate that the phone number is in one of the following formats:
+                        
+                        (i) ‘ddd-ddd-dddd’ – 12 digits with two dashes where the first dash is between the third and fourth 
+                                digits and the second dash is between the sixth and seventh digits. 
+                        (ii) ‘dddddddddd’ – all 10 digits, or,
+                        (iii) ‘(ddd)ddddddd’ – 12 digits with the first three digits being enclosed by parentheses.
+                        (iv) ‘(ddd)ddd-dddd’ – 13 digits with the first three digits being enclosed by parentheses, 
+                                and there is a dash between the sixth and seventh digits. 
+
+                (b) Provide an alert if the phone number is not in the required formats.  ALL four of the above formats must be accepted by the validation routine.
+
+==========================================================================================================================================================================================
+*DONE* (3) Validate the email:  
+
+REQUIREMENT:  PLEASE DO NOT USE REGULAR EXPRESSIONS.  
+PLEASE DO NOT USE jQUERY, BUILT-IN VALIDATION FUNCTIONALITY or DOWNLOADED VALIDATION FUNCTIONS.  
+I WANT YOU TO USE JavaScript STRING MANIPULATION TECHNIQUES ON THIS ASSIGNMENT.  THANK YOU!
+
+
+    (a) If the email is not empty, validate that the email string satisfies the following requirement:
+            (i) The email string must contains a single “@” which is not in the first and last positions.
+            (ii) The email string must contain a "." which is in the 4th from last or 3rd from last positions.
+
+    (b) Provide an alert if the email is not in the correct format.
+
+==========================================================================================================================================================================================
+*DONE*  (4) Don’t forget your documentation.  All files, including the .css file, should be documented using the correct notation for HTML or CSS.
+
+==========================================================================================================================================================================================
+*DONE*  (5) See my solution on the next page.  If there are any questions, be sure to let me know!
+
+==========================================================================================================================================================================================
